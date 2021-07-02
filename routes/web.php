@@ -92,7 +92,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/error/{ticket}', [ShopController::class, 'errorPay'])->name('error');
 
 Route::post('/payment-pay-invite',[ShopController::class, 'paymentWebpay']);
-Route::get('/success-invite/{ticket}', [ShopController::class, 'successPay'])->name('success');
+// ERROR_ROUTER Route::get('/success-invite/{ticket}', [ShopController::class, 'successPay'])->name('success');
 
 Route::post('/check-pay',[ShopController::class, 'checkWebpay']);
 
