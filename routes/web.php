@@ -39,7 +39,6 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/about', function () { return view('about'); })->name('about');
@@ -61,7 +60,7 @@ Route::get('/politica-de-privacidad', function () { return view('privacy-policie
 
 
 Route::get('subscribe-form',[SubscriptionController::class, 'subscribeForm'])->name('subscribe-form');
-Route::post('subscribe-payment-charge',[SubscriptionController::class, 'susbcriptionPayment'])->name('susbcription-payment');
+// NAME DUPLICATE Route::post('subscribe-payment-charge',[SubscriptionController::class, 'susbcriptionPayment'])->name('susbcription-payment');
 Route::post('subscribe-payment-check',[SubscriptionController::class, 'susbcriptionPaymentCheck'])->name('susbcription-payment');
 
 Route::resource('subscription',SubscriptionController::class);
@@ -153,7 +152,7 @@ Route::group(['middleware' => 'role'], function () {
 });
 
 
-
+Auth::routes();
 //Route::redirect('/login', '/my-account');
 Route::get('logout',[LoginController::class, 'logout'])->name('logout');
 
@@ -162,8 +161,3 @@ Route::get('/auth/check',function(){
     return Auth::check() ? Auth::user()->suscribe : false;
 });
 
-
-
-Route::get('{any}', function() {
-    return redirect('login');
- })->where('any', '.*');
