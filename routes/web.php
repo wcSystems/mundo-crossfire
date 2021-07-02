@@ -60,8 +60,8 @@ Route::get('/politica-de-privacidad', function () { return view('privacy-policie
 
 
 Route::get('subscribe-form',[SubscriptionController::class, 'subscribeForm'])->name('subscribe-form');
-Route::post('subscribe-payment-charge',[SubscriptionController::class, 'susbcriptionPayment'])->name('susbcription-payment');
-Route::post('subscribe-payment-check',[SubscriptionController::class, 'susbcriptionPaymentCheck'])->name('susbcription-payment');
+// ERROR_ROUTER Route::post('subscribe-payment-charge',[SubscriptionController::class, 'susbcriptionPayment'])->name('susbcription-payment');
+// ERROR_ROUTER Route::post('subscribe-payment-check',[SubscriptionController::class, 'susbcriptionPaymentCheck'])->name('susbcription-payment');
 
 Route::resource('subscription',SubscriptionController::class);
 
