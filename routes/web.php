@@ -84,7 +84,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
         // MENSAJES PAYMENT
-    Route::get('/success/{ticket}', [ShopController::class, 'successPay'])->name('success');
+    // NAME DUPLICATE Route::get('/success/{ticket}', [ShopController::class, 'successPay'])->name('success');
     // Route::get('/error/{ticket}', [ShopController::class, 'errorPay'])->name('error');
    
 });
