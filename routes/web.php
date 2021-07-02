@@ -154,7 +154,8 @@ Route::group(['middleware' => 'role'], function () {
 
 Auth::routes();
 //Route::redirect('/login', '/my-account');
-Route::get('logout',[LoginController::class, 'logout'])->name('logout');
+//Route::get('logout',[LoginController::class, 'logout'])->name('logout');
+Route::get('logout',[LoginController::class, 'logout']);
 
 //chequear si esta autenticado, lo uso para saber que precio colocar (promocion, socio o no socio)
 Route::get('/auth/check',function(){
