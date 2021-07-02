@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/about', function () { return view('about'); })->name('about');
@@ -152,7 +153,7 @@ Route::group(['middleware' => 'role'], function () {
 });
 
 
-Auth::routes();
+
 //Route::redirect('/login', '/my-account');
 Route::get('logout',[LoginController::class, 'logout'])->name('logout');
 
@@ -161,3 +162,8 @@ Route::get('/auth/check',function(){
     return Auth::check() ? Auth::user()->suscribe : false;
 });
 
+
+
+Route::get('{any}', function() {
+    return redirect('login');
+ })->where('any', '.*');

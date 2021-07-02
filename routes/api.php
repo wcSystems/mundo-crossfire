@@ -31,9 +31,9 @@ use App\Http\Controllers\SubscriptionController;
 |
 */
 
-/* Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-}); */
+});
 
 //API PARA MOSTRAR LAS CATEGORIAS EN LOS SELECT
 Route::get('/list-categorias',[CategoriasController::class,'list_categorias'])->name('list-categorias');
