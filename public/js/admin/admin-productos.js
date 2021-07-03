@@ -9,11 +9,11 @@ $(document).ready(function() {
     });
 
     let table = $('#basic-datatable').DataTable({
-        searching: true,
+        //searching: true,
         responsive: true,
         processing: true,
         serverSide: true,
-        lengthChange: true,
+        //lengthChange: true,
         columns: [
             {data: 'titulo', name: 'titulo'},
             {data: 'cantidad', name: 'cantidad'},
