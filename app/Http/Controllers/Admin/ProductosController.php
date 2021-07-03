@@ -36,14 +36,16 @@ class ProductosController extends Controller
                     ->orderByRaw('-ordenados', 'DESC')->get(); */
 
 
-            $data = Producto::select(\DB::raw('IF(productos.indicador_promocion=0,"No","Si") as promo, indicador_promocion'),\DB::raw('IF(productos.destacado=0,"No","Si") as desta, destacado'),
+            /* $data = Producto::select(\DB::raw('IF(productos.indicador_promocion=0,"No","Si") as promo, indicador_promocion'),\DB::raw('IF(productos.destacado=0,"No","Si") as desta, destacado'),
                    'titulo','cantidad','precio_no_afiliados','precio_afiliados','precio_promocion','id','visible','precio_envio','ordenados')
-                   ->orderByRaw('-ordenados', 'DESC')->get();
+                   ->orderByRaw('-ordenados', 'DESC')->get(); */
+                
+                   $data = Producto::all();
 
 
             $data = $data->reverse();
 
-            return Datatables::of($data)->make(true);
+            return Datatables::of($data)->make();
             
         }
 

@@ -49,11 +49,13 @@ class ShopController extends Controller
 
         //$productos = $productos->reverse();
 
-        $productos=Producto::where('slug','!=',null)
+        /* $productos=Producto::where('slug','!=',null)
                     ->select('ordenados','id','titulo','precio_no_afiliados','precio_afiliados','indicador_promocion','precio_promocion','precio_envio','img_principal','descripcion','slug')->where('visible',1)
                     ->orderByRaw('-ordenados', 'DESC')
                     ->orderBy('precio_no_afiliados','ASC')
-                    ->get();
+                    ->get(); */
+
+        $productos = Producto::all();
 
         if($productos=="[]"){
            return redirect('/');
