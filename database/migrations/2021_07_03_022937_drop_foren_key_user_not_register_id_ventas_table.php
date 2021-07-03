@@ -14,7 +14,8 @@ class DropForenKeyUserNotRegisterIdVentasTable extends Migration
     public function up()
     {
         Schema::table('ventas', function (Blueprint $table) {
-            //
+            $table->unsignedBigInteger('user_not_register_id')->nullable();
+            $table->foreign('user_not_register_id')->references('id')->on('clientes_no_registrados')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
