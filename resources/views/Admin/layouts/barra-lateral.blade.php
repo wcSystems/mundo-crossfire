@@ -19,7 +19,7 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="{{route('admin-envio.index')}}"><i class="fa fa-truck"></i><span class="menu-title" data-i18n="Form Layout">Precio Despacho</span></a>
+            {{-- <li class=" nav-item"><a href="{{route('admin-envio.index')}}"><i class="fa fa-truck"></i><span class="menu-title" data-i18n="Form Layout">Precio Despacho</span></a> --}}
             <li class="nav-item" id="venta_noti"><a href="{{route('admin-ventas.index')}}" ><i class="fa fa-opencart"></i><span class="menu-title" data-i18n="Productos">Ventas</span>
                 <span id="venta_n"></span>
             </a>
