@@ -45,9 +45,7 @@
                                         
                         
                                                 <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
-                                                    data-columns="4" style="opacity: 1; transition: opacity 0.25s ease-in-out 0s;"><a href="#"
-                                                        class="woocommerce-product-gallery__trigger"><img draggable="false" role="img" class="emoji"
-                                                            alt="🔍" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f50d.svg"></a>
+                                                    data-columns="4" style="opacity: 1; transition: opacity 0.25s ease-in-out 0s;">
                                                             <div style=" width:100% !important" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b7bcb4e" data-id="b7bcb4e">
                                                                 <div class="elementor-column-wrap elementor-element-populated">
                                                                     <div class="elementor-widget-wrap">
@@ -129,23 +127,11 @@
                                                     <nav class="woocommerce-breadcrumb"><a
                                                             href="{{ route('/') }}">Inicio</a>&nbsp;/&nbsp;<a>{{$producto[0]->nombre_categoria}}</a>&nbsp;/&nbsp;{{$producto[0]->titulo}}</nav>
                                                     <h1 class="product_title entry-title">{{$producto[0]->titulo}}</h1>
-                                                    <p class="price"><span class="product_title entry-title" style="font-size:22px">Normal </span><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    <p class="price"><span class="product_title entry-title" style="font-size:22px"></span><span class="woocommerce-Price-amount amount"><bdi><span
                                                                     class="woocommerce-Price-currencySymbol">$ </span> <span id="format-in-html-product-normal-{{ $producto[0]->id }}">{{$producto[0]->precio_no_afiliados}}</span></bdi></span></p>
                         
                         
-                        
-                        
-                                                        @if ($producto[0]->indicador_promocion === 1)
-                                                            <p class="price" style="color: #D94F4F !important"><span class="product_title entry-title" style="font-size:22px">Oferta </span><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">$ </span> <span id="format-in-html-product-promocion-{{ $producto[0]->id }}">{{$producto[0]->precio_promocion}}</span></bdi></span></p>
-                                                        @else
-                                                            <p class="price"  style="color: #5CBBAC !important"><span class="product_title entry-title" style="font-size:22px">Afiliado </span><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">$ </span> <span id="format-in-html-product-afiliado-{{ $producto[0]->id }}">{{$producto[0]->precio_afiliados}}</span></bdi></span></p>
-                                                        @endif
-                        
-                        
-                        
-                                                    
+                
                         
                         
                                                     <div class="woocommerce-product-details__short-description">
@@ -194,9 +180,6 @@
                                                                 <div class="astra-shop-thumbnail-wrap"> 
                                                                     <a href="{{ route('shop-detail', $productos_relacionado->slug) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                                                         <img style="width:100%;height:200px;object-fit: contain"  alt="" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyloaded" src="{{asset($productos_relacionado->img_principal)}}"></a>
-                                                                        <a onclick="methodModal({{$productos_relacionado}})" style="cursor:pointer" class="ast-quick-view-text">
-                                                                            Vista rápida
-                                                                        </a>
                                                                     </div>
                                                                 <div class="astra-shop-summary-wrap"> 
                                                                     <span class="ast-woo-product-category">
@@ -206,23 +189,10 @@
                                                                         <h2 class="woocommerce-loop-product__title">{{$productos_relacionado->titulo}}</h2>
                                                                     </a>
                                                                         <span class="price">
-                                                                            <span class="woocommerce-Price-amount amount">Normal
+                                                                            <span class="woocommerce-Price-amount amount">
                                                                                 <bdi><span class="woocommerce-Price-currencySymbol">$ </span> <span id="format-in-html-relation-normal-{{ $productos_relacionado->id }}"> {{$productos_relacionado->precio_no_afiliados}}</span></bdi>
                                                                             </span>
                                                                         </span>
-                                                                    @if ($productos_relacionado->indicador_promocion === 1)
-                                                                        <span class="price">
-                                                                            <span style="color: #D94F4F !important" class="woocommerce-Price-amount amount">Oferta
-                                                                                <bdi><span class="woocommerce-Price-currencySymbol">$ </span> <span id="format-in-html-relation-promocion-{{ $productos_relacionado->id }}"> {{$productos_relacionado->precio_promocion}}</span></bdi>
-                                                                            </span>
-                                                                        </span>
-                                                                    @else
-                                                                        <span class="price">
-                                                                            <span style="color: #5CBBAC !important" class="woocommerce-Price-amount amount">Afiliado
-                                                                                <bdi><span  class="woocommerce-Price-currencySymbol">$ </span> <span id="format-in-html-relation-afiliado-{{ $productos_relacionado->id }}"> {{$productos_relacionado->precio_afiliados}}</span></bdi>
-                                                                            </span>
-                                                                        </span>
-                                                                    @endif
                                                                 </div>
                                                             </li>
                                                             @endforeach
@@ -251,68 +221,7 @@
 @endsection
 @section('js')
     <script>
-        function methodModal(req) {
 
-            localStorage.removeItem('current_product');
-            localStorage.setItem("current_product", JSON.stringify( req ))
-
-
-            let precio_html = ``
-
-            if(req.indicador_promocion === 1){
-                precio_html = `
-                <span class="price" >
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi>
-                            Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-normal-${req.id}"> ${formatCurrency(JSON.parse(req.precio_no_afiliados))} </span>
-                        </bdi>
-                    </span>
-                </span>
-                <br />
-                <span class="price">
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi style="color: #D94F4F !important">
-                            Oferta <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-promocion-${req.id}"> ${formatCurrency(JSON.parse(req.precio_promocion))} </span>
-                        </bdi>
-                    </span>
-                </span>`;
-            }else{
-                precio_html = `
-                <span class="price">
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi>
-                            Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-normal-${req.id}"> ${formatCurrency(JSON.parse(req.precio_no_afiliados))} </span>
-                        </bdi>
-                    </span>
-                </span>
-                <br />
-                <span class="price">
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi style="color: #5CBBAC !important">
-                            Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-afiliado-${req.id}"> ${formatCurrency(JSON.parse(req.precio_afiliados))} </span>
-                        </bdi>
-                    </span>
-                </span>`;
-            }
-
-            $('#current_product_price').empty().append(precio_html)
-
-
-            //$('#current_product_price').text('$'+' '+formatCurrency(req.precio_no_afiliados) )
-            $('#current_product_img').attr('src', req.img_principal);
-            $('#current_product_title').text(req.titulo)
-            $('#current_product_category').text(req.nombre_categoria)
-            $('#current_product_description').text(req.descripcion)
-
-            $('.ast-quick-view-bg').addClass('ast-quick-view-bg-ready')
-            $('#ast-quick-view-modal').addClass('open stick-add-to-cart')
-        }
-
-        function methodModalClose() {
-            $('.ast-quick-view-bg').removeClass('ast-quick-view-bg-ready')
-            $('#ast-quick-view-modal').removeClass('open stick-add-to-cart')
-            $('#unit_product').val(1)
-        }
         function cartProduct(req) {
             const units = parseInt($('#unit_product').val())
             const price_unit = req.precio_no_afiliados
