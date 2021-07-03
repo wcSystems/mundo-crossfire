@@ -1,43 +1,6 @@
-/*=========================================================================================
-    File Name: data-list-view.js
-    Description: List View
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
-==========================================================================================*/
-
 $(document).ready(function() {
 
     $("#submitImg").hide();
-
-    ///PARA LISTAR LAS CATEGORIAS
-    /* fetch('/api/list-categorias')
-    .then(response => response.json())
-    .then(repos => {
-        var list= repos.categoria
-        list.sort()
-
-        $.each(list,function(key,value){
-            $("#categoria").append('<option value="'+value.id+'">'+value.nombre_categoria+'</option>');
-        });
-
-    })
-    .catch(err => console.log(err)) */
-
-
-    fetch('/api/validateOrder')
-    .then(response => response.json())
-    .then(repos => {
-        var list= repos.final
-
-        $.each(list,function(key,value){
-            $("#ordenados").append('<option value="'+value+'">'+value+'</option>');
-        });
-
-    })
-    .catch(err => console.log(err))
-    
 
     $.ajaxSetup({
         headers: {
