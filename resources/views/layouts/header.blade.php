@@ -54,7 +54,7 @@
                                             @else
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4582" @endif>
                                                 <a href="{{ route('subscription.index') }}" class="menu-link">
-                                                    <span class="menu-text text-marcado-desktop ">Suscribe Reciclaje</span>
+                                                    <span class="menu-text text-marcado-desktop ">Box</span>
                                                     <span class="sub-arrow"></span>
                                                 </a>
                                         </li>

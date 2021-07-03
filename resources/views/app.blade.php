@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Petcicla</title>
+    <title>Mundo Crossfire</title>
 
     @yield('meta')
 
@@ -82,7 +82,7 @@
 
 </head>
 {{-- Whtasapp --}}
-<a href="https://api.whatsapp.com/send?phone=+56940271976&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
+<a href="https://api.whatsapp.com/send?phone=+584121482348&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
     <i class="fab fa-whatsapp my-float"></i>
 </a>
 

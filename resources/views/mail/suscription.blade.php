@@ -20,7 +20,7 @@
     </div>
     <div>
         <h2 class="text-center"> Hola {{$user->name}}, Te has suscrito en nuestra plataforma.</h2>
-        <p class="text-center">Tu Suscripcion ha sido creada satisfactoriamente, Gracias por suscribirte en <a href="https://petcicla.cl/">Petcicla.cl</a> </p>
+        <p class="text-center">Tu Suscripcion ha sido creada satisfactoriamente, Gracias por suscribirte en <a href="https://mundo-crossfire.com.ve.cl/">mundo-crossfire.com.ve</a> </p>
         <p class="text-center"> Nro de Suscripcion : {{$venta->nro_suscripcion}}</p>
     </div>
 </body>

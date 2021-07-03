@@ -2,18 +2,18 @@
 @section('meta')
     <meta name="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Nosotros - Petcicla">
+    <meta itemprop="name" content="Nosotros - Mundo Crossfire">
     <meta itemprop="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta itemprop="image" content="{{asset('storage/meta/iso.png')}}">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="petcicla.cl">
+    <meta property="og:url" content="www.mundo-crossfire.com.ve">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nosotros - Petcicla">
+    <meta property="og:title" content="Nosotros - Mundo Crossfire">
     <meta property="og:description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta property="og:image" content="{{asset('storage/meta/iso.png')}}">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nosotros - Petcicla">
+    <meta name="twitter:title" content="Nosotros - Mundo Crossfire">
     <meta name="twitter:description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta name="twitter:image" content="{{asset('storage/meta/iso.png')}}">
 @endsection
@@ -207,7 +207,7 @@
                                                                                             class="elementor-widget-container">
                                                                                             <h3
                                                                                                 class="elementor-heading-title elementor-size-default">
-                                                                                                ¡Petcicla en números!</h3>
+                                                                                                ¡Mundo Crossfire en números!</h3>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>

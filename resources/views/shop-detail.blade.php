@@ -3,18 +3,18 @@
 @section('meta')
     <meta name="description" content="{{$producto[0]->descripcion}}">
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="{{$producto[0]->titulo}} - Petcicla">
+    <meta itemprop="name" content="{{$producto[0]->titulo}} - Mundo Crossfire">
     <meta itemprop="description" content="{{$producto[0]->descripcion}}">
     <meta itemprop="image" content="{{ asset($producto[0]->img_principal) }}">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="petcicla.cl">
+    <meta property="og:url" content="www.mundo-crossfire.com.ve">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{$producto[0]->titulo}} - Petcicla">
+    <meta property="og:title" content="{{$producto[0]->titulo}} - Mundo Crossfire">
     <meta property="og:description" content="{{$producto[0]->descripcion}}">
     <meta property="og:image" content="{{ asset($producto[0]->img_principal) }}">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{$producto[0]->titulo}} - Petcicla">
+    <meta name="twitter:title" content="{{$producto[0]->titulo}} - Mundo Crossfire">
     <meta name="twitter:description" content="{{$producto[0]->descripcion}}">
     <meta name="twitter:image" content="{{ asset($producto[0]->img_principal) }}">
 @endsection

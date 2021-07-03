@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petcicla</title>
+    <title>Mundo Crossfire</title>
 </head>
 <body style="margin:0 auto;max-width:400px">
     <div style="text-align: center;">
@@ -29,7 +29,7 @@
         <div style="background-color:#5cbbac ;width: 100% !important;text-align: left;position: relative !important;">
             <br>
             <div align="center">
-                <b style="color:white"> ® 2021 Petcicla - Derechos Reservados<b>
+                <b style="color:white"> ® 2021 Mundo Crossfire - Derechos Reservados<b>
             </div>
             <br>
             <br>

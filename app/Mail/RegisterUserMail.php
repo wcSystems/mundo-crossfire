@@ -32,7 +32,7 @@ class RegisterUserMail extends Mailable
     {
         return $this
         ->from('notificaciones@filtalent.com')
-        ->subject('Usuario Registrado Exitosamente - Petcicla')
+        ->subject('Usuario Registrado Exitosamente - Mundo Crossfire')
         ->view('mail.register')
         ->with([
             'type'=> $this->type,

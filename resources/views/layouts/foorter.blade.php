@@ -35,8 +35,8 @@
                         </div>
                     </div>
                     <div style="margin-top: 10px;text-transform: none !important" class="ast-small-footer-section ast-small-footer-section-1">
-                        Copyright © 2021 Petcicla | Revisa nuestras: <a href="/politica-de-privacidad" rel="nofollow" style="color: white">Políticas de Privacidad. </a> <br />
-                        Desarrollado por <a href="https://shaades.com/" rel="nofollow" style="color: white">Shaades Digital Service </a> <br />
+                        Copyright © 2021 Mundo Crossfire | Revisa nuestras: <a href="/politica-de-privacidad" rel="nofollow" style="color: white">Políticas de Privacidad. </a> <br />
+                        Desarrollado por <a href="https://www.willinthon.tech/" rel="nofollow" style="color: white">Willinthon Tech </a> <br />
                     </div>
                 </div>
             </div>

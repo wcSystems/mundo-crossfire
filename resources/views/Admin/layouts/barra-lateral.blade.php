@@ -3,7 +3,7 @@
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto"><a class="navbar-brand" href="{{route('admin-index')}}">
                     <img class="rounded" style="background-color: whitesmoke" width="35px" src="{{asset('images/icon-Petcicla.png')}}" alt="">
-                    <h2 class="brand-text mb-0">Petcicla</h2>
+                    <h2 class="brand-text mb-0">MCF</h2>
                 </a></li>
         </ul>
     </div>

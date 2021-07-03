@@ -35,7 +35,7 @@ class SuscriptionRegisterMail extends Mailable
     {
         return $this
         ->from('notificaciones@filtalent.com')
-        ->subject('Te has suscrito Exitosamente - Petcicla')
+        ->subject('Te has suscrito Exitosamente - Mundo Crossfire')
         ->view('mail.suscription')
         ->with([
             'type'=> $this->type,

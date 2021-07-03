@@ -35,7 +35,7 @@ class ShopBuyMail extends Mailable
     {
         return $this
         ->from('notificaciones@filtalent.com')
-        ->subject('Compra Realizada Exitosamente - Petcicla')
+        ->subject('Compra Realizada Exitosamente - Mundo Crossfire')
         ->view('mail.shop')
         ->with([
             'type'=> $this->type,

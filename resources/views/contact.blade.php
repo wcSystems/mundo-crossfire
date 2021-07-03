@@ -2,18 +2,18 @@
 @section('meta')
     <meta name="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Contactanos - Petcicla">
+    <meta itemprop="name" content="Contactanos - Mundo Crossfire">
     <meta itemprop="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta itemprop="image" content="{{asset('storage/meta/iso.png')}}">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="petcicla.cl">
+    <meta property="og:url" content="www.mundo-crossfire.com.ve">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Contactanos - Petcicla">
+    <meta property="og:title" content="Contactanos - Mundo Crossfire">
     <meta property="og:description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta property="og:image" content="{{asset('storage/meta/iso.png')}}">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contactanos - Petcicla">
+    <meta name="twitter:title" content="Contactanos - Mundo Crossfire">
     <meta name="twitter:description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta name="twitter:image" content="{{asset('storage/meta/iso.png')}}">
 @endsection
@@ -161,7 +161,7 @@
                                                                                             class="elementor-widget-container">
                                                                                             <div
                                                                                                 class="elementor-text-editor elementor-clearfix">
-                                                                                                <p>contacto@petcicla.cl</p>
+                                                                                                <p>contacto@mundo-crossfire.com.ve</p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -281,14 +281,14 @@
                                                                                                                     class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
                                                                                                         </span>
                                                                                                         <a href="#"
-                                                                                                            class="elementor-toggle-title">¿Qué es petcicla?</a>
+                                                                                                            class="elementor-toggle-title">¿Qué es un BOX?</a>
                                                                                                     </div>
                                                                                                     <div id="elementor-tab-content-6931"
                                                                                                         class="elementor-tab-content elementor-clearfix"
                                                                                                         data-tab="1"
                                                                                                         role="tabpanel"
                                                                                                         aria-labelledby="elementor-tab-title-6931">
-                                                                                                        <p>Petcicla es una organización la cual se preocupa de tu mascota y, al mismo tiempo, del medio ambiente. 
+                                                                                                        <p>Mundo Crossfire es una organización la cual se preocupa de tu mascota y, al mismo tiempo, del medio ambiente. 
                                                                                                             Si te afilias, podrás obtener delivery gratuito en productos de alimentos para tu mascota, objetos reciclados y productos para reciclar; demás ese mismo día nos llevamos tus residuos reciclables. Con esto tú en conjunto con tu mascota dejarán una huella positiva para ustedes y el resto de la comunidad.
                                                                                                     </div>
                                                                                                 </div>
@@ -317,7 +317,7 @@
                                                                                                         data-tab="2"
                                                                                                         role="tabpanel"
                                                                                                         aria-labelledby="elementor-tab-title-6932">
-                                                                                                        <p>Al ser socio de Petcicla, podrás hacer las compras que desees en la sección productos y será despachado el día que te visitemos para recoger tus reciclables. Con esto el delivery de tus pedidos no tiene costo alguno.</p>
+                                                                                                        <p>Al ser socio de Mundo Crossfire, podrás hacer las compras que desees en la sección productos y será despachado el día que te visitemos para recoger tus reciclables. Con esto el delivery de tus pedidos no tiene costo alguno.</p>
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div

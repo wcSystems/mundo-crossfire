@@ -20,7 +20,7 @@
     </div>
     <div>
         <h2 class="text-center"> Hola , {{$user->name}}</h2>
-        <p class="text-center">Tu usuario ha sido creado satisfactoriamente, Gracias por registrarte en <a href="https://petcicla.cl/">Petcicla.cl</a> </p>
+        <p class="text-center">Tu usuario ha sido creado satisfactoriamente, Gracias por registrarte en <a href="https://mundo-crossfire.com.ve/">mundo-crossfire.com.ve</a> </p>
     </div>
 </body>
 </html>

@@ -2,18 +2,18 @@
 @section('meta')
     <meta name="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Formulario de Suscripcion - Petcicla">
+    <meta itemprop="name" content="Formulario de Suscripcion - Mundo Crossfire">
     <meta itemprop="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta itemprop="image" content="{{asset('storage/meta/iso.png')}}">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="petcicla.cl">
+    <meta property="og:url" content="www.mundo-crossfire.com.ve">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Formulario de Suscripcion - Petcicla">
+    <meta property="og:title" content="Formulario de Suscripcion - Mundo Crossfire">
     <meta property="og:description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta property="og:image" content="{{asset('storage/meta/iso.png')}}">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Formulario de Suscripcion - Petcicla">
+    <meta name="twitter:title" content="Formulario de Suscripcion - Mundo Crossfire">
     <meta name="twitter:description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
     <meta name="twitter:image" content="{{asset('storage/meta/iso.png')}}">
 @endsection
@@ -305,7 +305,7 @@
                                                                         </section>
                                                                         @guest
                                                                             <div id="finish-msg-register" style="margin: 15px auto;background-color:#f2f2f2;padding:10px;font-size:20px">
-                                                                                <p style="margin-bottom: 0px">!!Felicidades!!, te has registrado exitosamente en Petcicla, te hemos enviado un email de confirmacion.</p>
+                                                                                <p style="margin-bottom: 0px">!!Felicidades!!, te has registrado exitosamente en Mundo Crossfire, te hemos enviado un email de confirmacion.</p>
                                                                                 <p style="margin-bottom: 0px">A partir de ahora puedes entrar como usuario con tu correo y tu clave secreta.</p>
                                                                             </div>
                                                                         @endguest
