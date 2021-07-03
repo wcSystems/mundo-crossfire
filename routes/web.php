@@ -60,7 +60,7 @@ Route::get('/politica-de-privacidad', function () { return view('privacy-policie
 
 
 Route::get('subscribe-form',[SubscriptionController::class, 'subscribeForm'])->name('subscribe-form');
-// NAME DUPLICATE Route::post('subscribe-payment-charge',[SubscriptionController::class, 'susbcriptionPayment'])->name('susbcription-payment');
+Route::post('subscribe-payment-charge',[SubscriptionController::class, 'susbcriptionPayment'])->name('susbcription-payment');
 Route::post('subscribe-payment-check',[SubscriptionController::class, 'susbcriptionPaymentCheck'])->name('susbcription-payment');
 
 Route::resource('subscription',SubscriptionController::class);
@@ -84,7 +84,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
         // MENSAJES PAYMENT
-    // NAME DUPLICATE Route::get('/success/{ticket}', [ShopController::class, 'successPay'])->name('success');
+    Route::get('/success/{ticket}', [ShopController::class, 'successPay'])->name('success');
     // Route::get('/error/{ticket}', [ShopController::class, 'errorPay'])->name('error');
    
 });
@@ -154,8 +154,7 @@ Route::group(['middleware' => 'role'], function () {
 
 Auth::routes();
 //Route::redirect('/login', '/my-account');
-//Route::get('logout',[LoginController::class, 'logout'])->name('logout');
-Route::get('logout',[LoginController::class, 'logout']);
+Route::get('logout',[LoginController::class, 'logout'])->name('logout');
 
 //chequear si esta autenticado, lo uso para saber que precio colocar (promocion, socio o no socio)
 Route::get('/auth/check',function(){
