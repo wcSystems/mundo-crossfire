@@ -4,11 +4,6 @@
         padding-left: 10px !important;}
     .ast-site-header-cart{
         margin-right: 20px}
-    @media (min-width:767px) {
-        .text-marcado-desktop{
-            border: 2px solid #57b6b2;
-            padding: 10px;}
-    }
 </style>
 <header class="site-header header-main-layout-1 ast-primary-menu-enabled ast-menu-toggle-icon ast-mobile-header-inline ast-above-header-mobile-inline ast-below-header-mobile-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead">
     <div class="main-header-bar-wrap">
@@ -54,7 +49,7 @@
                                             @else
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4582" @endif>
                                                 <a href="{{ route('subscription.index') }}" class="menu-link">
-                                                    <span class="menu-text text-marcado-desktop ">Box</span>
+                                                    <span class="menu-text">Suscripción Box</span>
                                                     <span class="sub-arrow"></span>
                                                 </a>
                                         </li>
@@ -65,29 +60,7 @@
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406" 
                                             @endif>
                                                 <a href="{{ route('shop') }}" class="menu-link">
-                                                    <span class="menu-text">Tienda</span>
-                                                    <span class="sub-arrow"></span>
-                                                </a>
-                                        </li>
-                                        <li id="menu-item-344" 
-                                            @if (\Request::is('about')) 
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344 menu-item-home current-menu-item page_item page-item-95 current_page_item"
-                                            @else
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344" 
-                                            @endif>
-                                                <a href="{{ route('about') }}" class="menu-link">
-                                                    <span class="menu-text">Nosotros</span>
-                                                    <span  class="sub-arrow"></span>
-                                                </a>
-                                        </li>
-                                        <li id="menu-item-337" 
-                                            @if (\Request::is('contact')) 
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-337 menu-item-home current-menu-item page_item page-item-95 current_page_item"
-                                            @else
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-337" 
-                                            @endif>
-                                                <a href="{{ route('contact') }}" class="menu-link">
-                                                    <span class="menu-text">Contáctanos</span>
+                                                    <span class="menu-text">Fitness Store</span>
                                                     <span class="sub-arrow"></span>
                                                 </a>
                                         </li>

@@ -81,11 +81,6 @@
 
 
 </head>
-{{-- Whtasapp --}}
-<a href="https://api.whatsapp.com/send?phone=+584121482348&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
-    <i class="fab fa-whatsapp my-float"></i>
-</a>
-
 
 @if (\Request::is('shop'))
 
