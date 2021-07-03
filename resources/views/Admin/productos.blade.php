@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/tables/datatable/datatables.min.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/extensions/sweetalert2.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/admin/productos.css')}}"> 
+    <link rel="stylesheet" type="text/css" href=""{{asset('vendors/css/extensions/sweetalert2.min.css')}}">
+    
     @endsection
     <!-- Fin Head -->
 
@@ -301,8 +301,6 @@
 
             <script src="{{asset('vendors/js/extensions/sweetalert2.all.min.js')}}"></script>
             <script src="{{asset('vendors/js/extensions/polyfill.min.js')}}"></script>
-
-       
         @endsection
 
         @section('script-page')
