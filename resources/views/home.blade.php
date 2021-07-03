@@ -51,6 +51,11 @@
         @media (min-width:512px) {
             .img-huella-home{
                 display: inline;}}
+        @media (max-width:512px) {
+            .marcas_mobile{ 
+                display: block !important; }
+            .marcas_desktop{
+                display: none;}}
         @media (min-width:1025px) {
             .box-expand-pd{
                 padding:40px !important}
@@ -203,13 +208,6 @@
                                                         <div class="box-desktop-2 elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a2e95a1"  data-id="a2e95a1"  data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                             <div style="display: table;margin:0px !important"  class=" height-block elementor-column-wrap elementor-element-populated">
                                                                 <div style="display: table-cell; vertical-align: middle;" class="elementor-widget-wrap">
-                                                                    {{-- <div class="elementor-element elementor-element-6c563d7 elementor-widget elementor-widget-image" data-id="6c563d7" data-element_type="widget" data-widget_type="image.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-image">
-                                                                                <img width="82" height="80" alt="" src="images/camion-blanco-25.png" class="attachment-large size-large lazyload" />
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> --}}
                                                                     <div  class="elementor-element elementor-element-dd47011 elementor-widget elementor-widget-text-editor" data-id="dd47011" data-element_type="widget"  data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-text-editor elementor-clearfix">
@@ -271,11 +269,7 @@
                                                                 <div class="elementor-element elementor-element-da07482 elementor-widget elementor-widget-text-editor" data-id="da07482" data-element_type="widget" data-widget_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            Al <span style="color: #5cbbac;">Suscribirte</span>
-                                                                            a nuestros planes obtienes descuento en
-                                                                            todos nuestros productos, el envio te
-                                                                            sale <span style="color: #5cbbac;">gratis</span>
-                                                                            y recogemos tus desechos reciclables.
+                                                                            Productos de alta calidad para que puedas entrenar donde sea en esta cuarentena.
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -295,7 +289,7 @@
                                                                                                 <span class="ast-woo-product-category">
                                                                                                     @foreach($categorias as $categoria)
                                                                                                         @if($producto->id==$categoria->id)
-                                                                                                            {{$categoria->nombre_categoria}} |
+                                                                                                            {{$categoria->nombre_categoria}}
                                                                                                         @endif
                                                                                                     @endforeach
                                                                                                 </span>
@@ -304,37 +298,13 @@
                                                                                                         {{$producto->titulo}}
                                                                                                     </h2>
                                                                                                 </a>
-                                                                                                @if ($producto->indicador_promocion === 1)
-                                                                                                    <span class="price">
-                                                                                                        <span class="woocommerce-Price-amount amount">
-                                                                                                            <bdi>
-                                                                                                                Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-productos-normal-{{$producto->id}}"> {{ $producto->precio_no_afiliados }} </span>
-                                                                                                            </bdi>
-                                                                                                        </span>
+                                                                                                <span class="price">
+                                                                                                    <span class="woocommerce-Price-amount amount">
+                                                                                                        <bdi>
+                                                                                                            <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-productos-normal-{{$producto->id}}"> {{ $producto->precio_no_afiliados }} </span>
+                                                                                                        </bdi>
                                                                                                     </span>
-                                                                                                    <span class="price">
-                                                                                                        <span class="woocommerce-Price-amount amount">
-                                                                                                            <bdi style="color: #D94F4F !important">
-                                                                                                                Oferta <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-productos-promocion-{{$producto->id}}"> {{ $producto->precio_promocion }} </span>
-                                                                                                            </bdi>
-                                                                                                        </span>
-                                                                                                    </span>
-                                                                                                @else
-                                                                                                    <span class="price">
-                                                                                                        <span class="woocommerce-Price-amount amount">
-                                                                                                            <bdi>
-                                                                                                                Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-productos-normal-{{$producto->id}}"> {{ $producto->precio_no_afiliados }} </span>
-                                                                                                            </bdi>
-                                                                                                        </span>
-                                                                                                    </span>
-                                                                                                    <span class="price">
-                                                                                                        <span class="woocommerce-Price-amount amount">
-                                                                                                            <bdi style="color: #5CBBAC !important">
-                                                                                                                Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-productos-afiliado-{{$producto->id}}"> {{ $producto->precio_afiliados }} </span>
-                                                                                                            </bdi>
-                                                                                                        </span>
-                                                                                                    </span>
-                                                                                                @endif
+                                                                                                </span>
                                                                                             </div>
                                                                                         </li>
                                                                                     @endforeach
@@ -374,35 +344,35 @@
                                                                     <div class="elementor-image-box-wrapper">
                                                                         <div class="elementor-image-box-content">
                                                                             <h3 class="elementor-image-box-title">
-                                                                                Somos parte de Grupocycle
+                                                                                Somos parte del grupo de trainer certificados de Venezuela 
                                                                             </h3>
                                                                             <p class="elementor-image-box-description">
-                                                                                Apoyamos la misión de desarrollar proyectos de transformación de residuos, que permitan a nuestros clientes contar con alternativas reales para integrar sus hogares al concepto de economía circular.
+                                                                                Apoyamos la misión de desarrollar proyectos de transformación a traves del entrenamiento.
                                                                             </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-50d8274 elementor--h-position-center elementor--v-position-middle elementor-arrows-position-inside elementor-pagination-position-inside elementor-widget elementor-widget-slides" data-id="50d8274" data-element_type="widget" data-settings="{&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;transition&quot;:&quot;slide&quot;,&quot;transition_speed&quot;:500}" data-widget_type="slides.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-swiper">
-                                                                        <div class="elementor-slides-wrapper elementor-main-swiper swiper-container" dir="ltr" data-animation="fadeInUp">
-                                                                            <div class="swiper-wrapper elementor-slides">
+                                                                <div class="elementor-widget-container" >
+                                                                    <div class="elementor-swiper" style="height: 250px !important;display:flex !important;margin-top:-40px" >
+                                                                        <div class="elementor-slides-wrapper elementor-main-swiper swiper-container" style="margin: auto" dir="ltr" data-animation="fadeInUp" >
+                                                                            <div class="swiper-wrapper elementor-slides" >
                                                                                 <div class="elementor-repeater-item-c39dd82 swiper-slide">
                                                                                     <div style="background-color: #833CA300; background-size: contain;width: 300px;background-repeat: no-repeat;height: 100%;background-position: center;margin: auto;background-image: url(./images/grupocycle-01.png)" ></div>
-                                                                                    <div class="swiper-slide-inner">
+                                                                                    <div class="swiper-slide-inner" style="padding: unset !important">
                                                                                         <div class="swiper-slide-contents"> </div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="elementor-repeater-item-26b33b7 swiper-slide">
                                                                                     <div style="background-color: #833CA300; background-size: contain;width: 300px;background-repeat: no-repeat;height: 100%;background-position: center;margin: auto;background-image:url(./images/NUTRACYCLE-06.png)"   ></div>
-                                                                                    <div class="swiper-slide-inner">
+                                                                                    <div class="swiper-slide-inner" style="padding: unset !important">
                                                                                         <div class="swiper-slide-contents"></div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="elementor-repeater-item-c91718a swiper-slide">
                                                                                     <div style="background-color: #833CA300; background-size: contain;width: 300px;background-repeat: no-repeat;height: 100%;background-position: center;margin: auto;background-image:url(./images/NEOCYCLE-06.png)"   ></div>
-                                                                                    <div class="swiper-slide-inner">
+                                                                                    <div class="swiper-slide-inner" style="padding: unset !important">
                                                                                         <div class="swiper-slide-contents"></div>
                                                                                     </div>
                                                                                 </div>
@@ -492,41 +462,38 @@
                                         @if($marcas->isNotEmpty())
                                             <section class="elementor-section elementor-top-section elementor-element elementor-element-444fde9 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="444fde9" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-background-overlay"></div>
-                                                <div class="elementor-container elementor-column-gap-default">
+                                                <div class="">
                                                     <div class="elementor-row">
                                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-34dd2fb" data-id="34dd2fb">
                                                             <div class="elementor-column-wrap elementor-element-populated">
                                                                 <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-d7a2cd8 elementor-widget elementor-widget-heading" data-id="d7a2cd8" data-element_type="widget" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h3 class="elementor-heading-title elementor-size-default">
-                                                                                Nuestras Marcas:
-                                                                            </h3>
-                                                                        </div>
-                                                                    </div>
-                                                                    @foreach ($marcas->chunk(2) as $chunk)
-                                                                        <section class="seccionMarca50 elementor-section elementor-inner-section elementor-element elementor-element-67dc691 elementor-section-boxed elementor-section-height-default elementor-section-height-default"  data-id="67dc691">
-                                                                            <div  class="elementor-container elementor-column-gap-default">
-                                                                                <div style="display: table; min-height:150px;"  class="elementor-row">
-                                                                                    @foreach ($chunk as $item)
-                                                                                        <div  style="display: table-cell; vertical-align: middle;" class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1cb23ed"  data-id="1cb23ed">
-                                                                                            <div  class="elementor-column-wrap elementor-element-populated">
-                                                                                                <div class="elementor-widget-wrap">
-                                                                                                    <div class="elementor-element elementor-element-063642c elementor-widget elementor-widget-image"   data-id="063642c"  data-element_type="widget"    data-widget_type="image.default">
-                                                                                                        <div  class="elementor-widget-container">
-                                                                                                            <div class="elementor-image">
-                                                                                                                <img width="1024"   height="680" alt=""   src="<?php echo $item->img_marcas; ?>"   class="attachment-large size-large lazyload"  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                    <div class="marcas_mobile" style="display: none;width:100%">
+                                                                        @foreach ($marcas->chunk(1) as $chunk)
+                                                                            <div style="display: flex;margin:20px auto;width:100%">
+                                                                                @foreach ($chunk as $item)
+                                                                                    <div class="elementor-element elementor-element-063642c" style="margin: auto;display:flex">
+                                                                                        <div class="elementor-image">
+                                                                                            <img style="width: 250px;margin:auto" src="<?php echo $item->img_marcas; ?>"  class="attachment-large size-large lazyload"   />
                                                                                         </div>
-                                                                                    @endforeach
-                                                                                </div>
+                                                                                    </div>
+                                                                                @endforeach
                                                                             </div>
-                                                                        </section>
-                                                                    @endforeach
+                                                                        @endforeach
+                                                                    </div>
+                                                                    <div class="marcas_desktop" style="width: 100%">
+                                                                        @foreach ($marcas->chunk(6) as $chunk)
+                                                                            <div style="display: flex;margin:20px auto;width:100%">
+                                                                                @foreach ($chunk as $item)
+                                                                                    <div class="elementor-element elementor-element-063642c" style="margin: auto;display:flex">
+                                                                                        <div class="elementor-image">
+                                                                                            <img style="max-width: 200px;margin:auto" src="<?php echo $item->img_marcas; ?>"  class="attachment-large size-large lazyload"   />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                @endforeach
+                                                                            </div>
+                                                                        @endforeach
+                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
