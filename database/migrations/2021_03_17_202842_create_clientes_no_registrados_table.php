@@ -35,6 +35,6 @@ class CreateClientesNoRegistradosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes_no_registrados');
+        //Schema::dropIfExists('clientes_no_registrados');
     }
 }
