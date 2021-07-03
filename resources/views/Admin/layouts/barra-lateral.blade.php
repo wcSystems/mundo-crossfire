@@ -5,10 +5,8 @@
                     <img class="rounded" style="background-color: whitesmoke" width="35px" src="{{asset('images/icon-Petcicla.png')}}" alt="">
                     <h2 class="brand-text mb-0">Petcicla</h2>
                 </a></li>
-            <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4  toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon " data-ticon="icon-disc"></i></a></li>
         </ul>
     </div>
-    <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class=" navigation-header"><span>Tienda</span>
@@ -25,13 +23,6 @@
             <li class="nav-item" id="venta_noti"><a href="{{route('admin-ventas.index')}}" ><i class="fa fa-opencart"></i><span class="menu-title" data-i18n="Productos">Ventas</span>
                 <span id="venta_n"></span>
             </a>
-                
-                {{--<ul class="menu-content">
-                    <li><a href="{{route('admin-ventas.index')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Categorias">Ventas Ejecutadas</span></a>
-                    </li>
-                    <li><a href="{{route('admin-ventas-pendientes')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Productos">Ventas Pendientes</span></a>
-                    </li>
-                </ul>--}}
             </li>
             <li class="nav-item"><a ><i class="fa fa-tag"></i><span class="menu-title" data-i18n="Productos">Planes y Beneficios</span></a>
                 <ul class="menu-content">
@@ -41,9 +32,7 @@
                     </li>
                 </ul>
             </li>
-
             <li class="nav-item"><a ><i class="fa fa-users"></i><span class="menu-title" data-i18n="Productos">Clientes<span id="cliente_n"></span></span>
-               
             </a>
                 <ul class="menu-content">
                     <li id="clienteN"><a href="{{route('admin-clientes.index')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Categorias">Registrados</span><span id="cli_r_n"></span></a>
@@ -54,7 +43,6 @@
                     </li>
                 </ul>
             </li>
-
             <li class="nav-item" id="suscripcs"><a ><i class="fa fa-user-plus"></i><span class="menu-title" data-i18n="Productos">Suscripciones</span>
                 <span id="sus_n"></span>
             </a>
@@ -67,7 +55,6 @@
                     </li>
                 </ul>
             </li>
-
             <li class=" navigation-header"><span>Administracion</span>
             </li>
             <li class=" nav-item"><a href="{{route('admin-banner.index')}}"><i class="fa fa-file-image-o"></i><span class="menu-title" data-i18n="Form Layout">Banners</span></a>
@@ -86,9 +73,7 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="{{route('admin-empleados.index')}}"><i class="fa fa-user-circle"></i><span class="menu-title" data-i18n="Form Layout">Empleados</span></a>
-
             <li class=" nav-item"><a href="{{route('admin-marcas.index')}}"><i class="fa fa-file-image-o"></i><span class="menu-title" data-i18n="Form Layout">Marcas</span></a>
-
         </ul>
     </div>
 </div>

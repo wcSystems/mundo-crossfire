@@ -43,58 +43,8 @@ class ProductosController extends Controller
 
             $data = $data->reverse();
 
-            return Datatables::of($data)
-                    ->addIndexColumn()
-                    ->editColumn('visible', function ($request) {
-                        if($request->visible==1){
-                          return 'Si'; 
-                        }else{
-                          return 'No';
-                        }
-                        
-                    })
-                    ->editColumn('precio_envio', function ($request) {
-                        if($request->precio_envio==1){
-                          return 'Si'; 
-                        }else{
-                          return 'No';
-                        }
-                        
-                    })
-                    ->addColumn('categorias', function($row){
-                        $categorias= Categoria_Producto::where('producto_id',$row->id)->get();
-                        $cat=array();
-
-                        foreach($categorias as $fila) {
-                            array_push($cat, $fila->categoria_id);
-                        }
-
-                        //--------------------------------------------------------//
-
-                        $nombre_categorias=Categoria::whereIn('id', $cat)->get();
-                        $nombre=array();
-
-                        foreach($nombre_categorias as $filax) {
-                            array_push($nombre, $filax->nombre_categoria);
-                        }
-                
-                        $category=implode(", ", $nombre);
-                    
-                        return $category;
-
-                    })
-                    ->addColumn('action', function($row){
-
-                           $btn = '<a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$row->id.'" class="ver btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>';
-   
-                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$row->id.'" data-original-title="Edit" class="edit btn btn-success btn-sm editProduct"><i class="fa fa-pencil-square"></i></a>';
-   
-                           $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct"><i class="fa fa-times"></i></a>';
-    
-                           return $btn;
-                    })
-                    ->rawColumns(['action'])
-                    ->make(true);
+            return Datatables::of($data)->make(true);
+            
         }
 
         $categories=Categoria::get();

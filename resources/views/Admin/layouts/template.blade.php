@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +14,7 @@
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/vendors.min.css')}}">
         @yield('styles')
-    
     <!-- END: Vendor CSS-->
-
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-extended.css')}}">
@@ -25,7 +22,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/components.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/themes/dark-layout.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/themes/semi-dark-layout.css')}}">
-
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/core/menu/menu-types/vertical-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/core/colors/palette-gradient.css')}}">

@@ -3,12 +3,14 @@
     @section('title', 'Admin Productos')
 
     @section('styles')
+        <!-- Css Scope -->
+        <style> td{ text-align: center !important } </style>
     <!-- Para incluir estilo css -->
     <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/tables/datatable/datatables.min.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-    <link rel="stylesheet" type="text/css" href=""{{asset('vendors/css/extensions/sweetalert2.min.css')}}">
-    
+    <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/extensions/sweetalert2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/admin/productos.css')}}"> 
     @endsection
     <!-- Fin Head -->
 
@@ -33,7 +35,7 @@
                 </div>
 
             
-                <section id="basic-datatable">
+                <section >
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
@@ -45,21 +47,14 @@
                                 <div class="card-content">
                                     <div class="card-body card-dashboard">
                                         <div class="table-responsive">
-                                            <table class="table data-table">
+                                            <table id="basic-datatable" class="table table-striped table-bordered table-td-valign-middle">
                                                 <thead>
                                                     <tr>
-                                                        <th>Titulo</th>
-                                                        <th>Categoria</th>
-                                                        <th>Orden de Vista</th>
-                                                        <th width="50px">Destacado</th>
-                                                        <th width="50px">Cantidad</th>
-                                                        <th width="50px">Precio No Socio</th>
-                                                        <th width="50px">Precio Socio</th>
-                                                        <th width="50px">Precio Promocion</th>
-                                                        <th width="50px">Precio Envio</th>
-                                                        <th width="50px">Promocion</th>
-                                                        <th width="50px">Visible</th>
-                                                        <th>Acciones</th>
+                                                        <th class="text-center">Titulo</th>
+                                                        <th class="text-center">Cantidad</th>
+                                                        <th class="text-center">Precio</th>
+                                                        <th class="text-center">Visible</th>
+                                                        <th class="text-center">Acciones</th>
                                                     </tr>
                                                 </thead>              
                                             </table>
@@ -301,6 +296,8 @@
 
             <script src="{{asset('vendors/js/extensions/sweetalert2.all.min.js')}}"></script>
             <script src="{{asset('vendors/js/extensions/polyfill.min.js')}}"></script>
+
+       
         @endsection
 
         @section('script-page')
