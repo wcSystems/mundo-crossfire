@@ -1,5 +1,6 @@
+let table = {}
 function dataTable(){
-    let table = $('#basic-datatable').DataTable({
+    table = $('#basic-datatable').DataTable({
         searching: true,
         responsive: true,
         processing: true,
@@ -28,7 +29,7 @@ function dataTable(){
         ajax: {
             "url": "/productos",
             "data": function (d) {[ 
-                console.log('search',d)
+                //console.log('search',d)
             ]},
         },
         columnDefs: [
