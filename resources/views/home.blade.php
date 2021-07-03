@@ -253,7 +253,7 @@
                                         </section>
                                     @endif
 
-                                    @if(!isset($productos))
+                                    @if(count($productos) >= 1)
                                         <section class="elementor-section elementor-top-section elementor-element elementor-element-5031d75 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5031d75" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                             <div class="elementor-background-overlay"></div>
                                             <div class="elementor-container elementor-column-gap-default">
@@ -289,9 +289,6 @@
                                                                                             <div class="astra-shop-thumbnail-wrap">
                                                                                                 <a href="{{ route('shop-detail',$producto->slug) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                                                                                     <img style="width:100%;height:100%;height:300px;object-fit: contain" alt="" src="{{asset($producto->img_principal)}}" class="imgDestacados attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" />
-                                                                                                </a>
-                                                                                                <a style="cursor:pointer" onclick="methodModal({{$producto}})" class="ast-quick-view-text" data-product_id="243">Vista
-                                                                                                    rápida
                                                                                                 </a>
                                                                                             </div>
                                                                                             <div class="astra-shop-summary-wrap">
@@ -552,58 +549,7 @@
         let number = '+584121482348'
         let message_complete = `*HOME | $}* - ${$('#form-field-message').val()}`;
         let message_complete_ws = message_complete.split(" ").join("%20");
-        function methodModal(req) {
-            localStorage.removeItem('current_product');
-            localStorage.setItem("current_product", JSON.stringify( req ))
-            let precio_html = ``
-            if(req.indicador_promocion === 1){
-                precio_html = `
-                    <span class="price" >
-                        <span class="woocommerce-Price-amount amount">
-                            <bdi>
-                                Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-normal-${req.id}"> ${formatCurrency(JSON.parse(req.precio_no_afiliados))} </span>
-                            </bdi>
-                        </span>
-                    </span>
-                    <br />
-                    <span class="price">
-                        <span class="woocommerce-Price-amount amount">
-                            <bdi style="color: #D94F4F !important">
-                                Oferta <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-promocion-${req.id}"> ${formatCurrency(JSON.parse(req.precio_promocion))} </span>
-                            </bdi>
-                        </span>
-                    </span>`;
-            }else{
-                precio_html = `
-                    <span class="price">
-                        <span class="woocommerce-Price-amount amount">
-                            <bdi>
-                                Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-normal-${req.id}"> ${formatCurrency(JSON.parse(req.precio_no_afiliados))} </span>
-                            </bdi>
-                        </span>
-                    </span>
-                    <br />
-                    <span class="price">
-                        <span class="woocommerce-Price-amount amount">
-                            <bdi style="color: #5CBBAC !important">
-                                Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-modal-home-afiliado-${req.id}"> ${formatCurrency(JSON.parse(req.precio_afiliados))} </span>
-                            </bdi>
-                        </span>
-                    </span>`;
-            }
-            $('#current_product_price').empty().append(precio_html)
-            $('#current_product_img').attr('src', req.img_principal);
-            $('#current_product_title').text(req.titulo)
-            $('#current_product_category').text(req.nombre_categoria)
-            $('#current_product_description').text(req.descripcion)
-            $('.ast-quick-view-bg').addClass('ast-quick-view-bg-ready')
-            $('#ast-quick-view-modal').addClass('open stick-add-to-cart')
-        }
-        function methodModalClose() {
-            $('.ast-quick-view-bg').removeClass('ast-quick-view-bg-ready')
-            $('#ast-quick-view-modal').removeClass('open stick-add-to-cart')
-            $('#unit_product').val(1)
-        }
+       
         function EnviarMensaje(name, message){        
             if(name && message){
                 window.open(`https://api.whatsapp.com/send?phone=${number}&text=*~INFORMACIÓN~ | _${name}_* - ${message}`,'_blank');  

@@ -49,7 +49,6 @@ class HomeController extends Controller
         $productos=Producto:://join('categorias_productos','productos.id','=','categorias_productos.producto_id')
         //->join('categorias','categorias_productos.categoria_id','=','categorias.id')
         select('productos.id','titulo','precio_no_afiliados','precio_afiliados','indicador_promocion','precio_promocion','img_principal','descripcion','slug')->where('productos.destacado',1)
-        ->where('visible',1)
         ->where('slug','!=',null)
         ->inRandomOrder()->limit(4)->get();
 
