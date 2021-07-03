@@ -29,7 +29,7 @@ class AddUserIdToVentas extends Migration
     public function down()
     {
         Schema::table('ventas', function (Blueprint $table) {
-            //
+            $table->dropForeign('user_not_register_id');
         });
     }
 }
