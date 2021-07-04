@@ -30,7 +30,7 @@
                                     <tbody id="tbody">
                                         <tr class="woocommerce-cart-form__cart-item cart_item">
                                             <td class="product-remove">
-                                                <a class="remove" style="color:#5cbbac;border: 1px solid #5cbbac;">✔</a>						
+                                                <a class="remove" style="color:var(--global-primary);border: 1px solid var(--global-primary);">✔</a>						
                                             </td>
                                             <td class="product-thumbnail">
                                                 <a ><img width="300" height="300" alt="" src="${element.img}" ></a>						

@@ -9,7 +9,7 @@
     }
 
     .color-green{
-        color: #5CBBAC !important;
+        color: var(--global-primary) !important;
     }
     
     @media (min-width:767px) {
@@ -72,7 +72,7 @@
                                                                             data-id="b093c68" data-element_type="widget"
                                                                             data-widget_type="heading.default">
                                                                             <div class="elementor-widget-container">
-                                                                                <h4 style="color:#5CBBAC"
+                                                                                <h4 style="color:var(--global-primary)"
                                                                                     class="elementor-heading-title elementor-size-default">
                                                                                     Último paso</h4>
                                                                             </div>

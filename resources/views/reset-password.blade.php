@@ -7,7 +7,7 @@
 </head>
 <body style="margin:0 auto;max-width:400px">
     <div style="text-align: center;">
-        <div style="background-color:#5cbbac ;width: 100% !important;text-align: left;position: relative !important;">
+        <div style="background-color:var(--global-primary) ;width: 100% !important;text-align: left;position: relative !important;">
             <img src="{{ url('images/cropped-Petcicla-1-155x52.png')}}" alt="">
         </div>
         <h2 style="text-align: center;">
@@ -17,7 +17,7 @@
             Usted tendra <b>60 minutos</b> para cambiar su contraseña
         </h3>
       
-        <a style="background-color:#5cbbac ;border: none;color: white;padding: 10px 30px;border-radius:5px;font-size: 20px;text-decoration: none;margin: 5px auto !important;display: inline-block;min-width: 140px !important;" onMouseOver="style.textShadow='0 0 1px #FFF'" onMouseOut="style.textShadow='none'" href="{{ $url }}">
+        <a style="background-color:var(--global-primary) ;border: none;color: white;padding: 10px 30px;border-radius:5px;font-size: 20px;text-decoration: none;margin: 5px auto !important;display: inline-block;min-width: 140px !important;" onMouseOver="style.textShadow='0 0 1px #FFF'" onMouseOut="style.textShadow='none'" href="{{ $url }}">
             Recuperar
         </a>
         <br><br>
@@ -26,7 +26,7 @@
     </div>
 
     <footer>
-        <div style="background-color:#5cbbac ;width: 100% !important;text-align: left;position: relative !important;">
+        <div style="background-color:var(--global-primary) ;width: 100% !important;text-align: left;position: relative !important;">
             <br>
             <div align="center">
                 <b style="color:white"> ® 2021 Mundo Crossfire - Derechos Reservados<b>

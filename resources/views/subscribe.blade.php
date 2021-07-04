@@ -25,14 +25,14 @@
 }
 
     .select2-selection__rendered{
-        color: #5CBBAC !important;
+        color: var(--global-primary) !important;
         background: #fff;
         
         margin: 0  !important;
         margin-left: 15px !important
     }
     .select2-container--default.select2-container--focus .select2-selection--multiple{
-        border: solid #5CBBAC 1px !important
+        border: solid var(--global-primary) 1px !important
     }
     .select2-selection__choice{
         background-color: #fff !important
@@ -45,16 +45,16 @@
 
 
     .kit-individual-all:hover{
-        box-shadow: 0px 0px 10px 3px #5CBBAC !important;
-        color: #5CBBAC !important
+        box-shadow: 0px 0px 10px 3px var(--global-primary) !important;
+        color: var(--global-primary) !important
     }
     .kit-individual{
-        box-shadow: 0px 0px 10px 3px #5CBBAC !important;
-        color: #5CBBAC !important
+        box-shadow: 0px 0px 10px 3px var(--global-primary) !important;
+        color: var(--global-primary) !important
     }
 
     .color-green{
-        color: #5CBBAC !important;
+        color: var(--global-primary) !important;
     }
 
     .size-desktop{
@@ -80,7 +80,7 @@
 
        .select {
   position: relative;
-  border: 1px solid #5CBBAC;
+  border: 1px solid var(--global-primary);
   
   width: 120px;
   overflow: hidden;
@@ -231,7 +231,7 @@
     height: 0;
     border-style: solid;
     border-width: 7px 5px 0 5px;
-    border-color: #5CBBAC transparent transparent transparent;
+    border-color: var(--global-primary) transparent transparent transparent;
     z-index: 5;
     pointer-events: none;
 }
@@ -242,7 +242,7 @@
     background-color: transparent;
     background-image: none;
     appearance: none;
-    color: #5CBBAC !important;
+    color: var(--global-primary) !important;
     padding: 5px;
     width: 100%;
     text-align-last: center;
@@ -374,7 +374,7 @@
                                                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                                                 <div style="width: 100%;text-align: left;" class="selectDiv">
                                                                                                     <div class="spaceMovil">
-                                                                                                        <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;background-color:#5CBBAC;color:#fff;display: flex;align-items: center;justify-content: center;">
+                                                                                                        <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;background-color:var(--global-primary);color:#fff;display: flex;align-items: center;justify-content: center;">
                                                                                                             1
                                                                                                         </div>
                                                                                                         &nbsp
@@ -387,7 +387,7 @@
                                                                                                     </div>
                                                                                                     <div class="textNoMovil" style="margin-top: 0px">
                                                                                                         <div style="display: inline-flex !important;width:40px;height:20px;border-radius:50%;display: flex;align-items: center;justify-content: center;">
-                                                                                                            <hr style="border:none; border-left: 1px solid #5CBBAC;height:100%;width: 1px;  ">
+                                                                                                            <hr style="border:none; border-left: 1px solid var(--global-primary);height:100%;width: 1px;  ">
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div  style="display: inline-flex">
@@ -396,7 +396,7 @@
                                                                                                     </div>
                                                                                                     <div style="margin-top: -7px;" class="margin26">
                                                                                                         <div class="textNoMovil" style="display: inline-flex;width:40px;height:40px;border-radius:50%;display: flex;align-items: center;justify-content: center;">
-                                                                                                            <hr style="border:none; border-left: 1px solid #5CBBAC;height:100%;width: 1px;  ">
+                                                                                                            <hr style="border:none; border-left: 1px solid var(--global-primary);height:100%;width: 1px;  ">
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div class="selectDiv" style="display: inline-flex !important">
@@ -412,7 +412,7 @@
                                                                                                 </div>
                                                                                                 <div class="textNoMovil" style="margin-top: -20px;margin-bottom: -20px;width: 100%;text-align: left;">
                                                                                                     <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;display: flex;align-items: center;justify-content: center;">
-                                                                                                        <hr style="border:none; border-left: 1px solid #5CBBAC;height:100%;width: 1px;  ">
+                                                                                                        <hr style="border:none; border-left: 1px solid var(--global-primary);height:100%;width: 1px;  ">
                                                                                                     </div>
                                                                                                     &nbsp
                                                                                                     <div style="display: inline-flex !important">
@@ -421,7 +421,7 @@
                                                                                                 </div>
                                                                                                 <div class="spaceTopSec selectDiv" style="width: 100%;text-align: left;">
                                                                                                     <div class="spaceMovil">
-                                                                                                        <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;background-color:#5CBBAC;color:#fff;display: flex;align-items: center;justify-content: center;">
+                                                                                                        <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;background-color:var(--global-primary);color:#fff;display: flex;align-items: center;justify-content: center;">
                                                                                                             2
                                                                                                         </div>
                                                                                                         &nbsp
@@ -434,7 +434,7 @@
                                                                                                     </div>
                                                                                                     <div class="textNoMovil" style="margin-top: 0px">
                                                                                                         <div style="display: inline-flex !important;width:40px;height:20px;border-radius:50%;display: flex;align-items: center;justify-content: center;">
-                                                                                                            <hr style="border:none; border-left: 1px solid #5CBBAC;height:100%;width: 1px;  ">
+                                                                                                            <hr style="border:none; border-left: 1px solid var(--global-primary);height:100%;width: 1px;  ">
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div style="display: inline-flex">
@@ -443,7 +443,7 @@
                                                                                                     </div>
                                                                                                     <div style="margin-top: -7px;" class="margin26">
                                                                                                         <div class="textNoMovil" style="display: inline-flex;width:40px;height:40px;border-radius:50%;display: flex;align-items: center;justify-content: center;">
-                                                                                                            <hr style="border:none; border-left: 1px solid #5CBBAC;height:100%;width: 1px;  ">
+                                                                                                            <hr style="border:none; border-left: 1px solid var(--global-primary);height:100%;width: 1px;  ">
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div class="selectDiv" style="display: inline-flex !important">
@@ -459,7 +459,7 @@
                                                                                                 </div>
                                                                                                 <div class="textNoMovil " style="margin-top: -20px;margin-bottom: -20px;width: 100%;text-align: left;">
                                                                                                     <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;display: flex;align-items: center;justify-content: center;">
-                                                                                                        <hr style="border:none; border-left: 1px solid #5CBBAC;height:100%;width: 1px;  ">
+                                                                                                        <hr style="border:none; border-left: 1px solid var(--global-primary);height:100%;width: 1px;  ">
                                                                                                     </div>
                                                                                                     &nbsp
                                                                                                     <div style="display: inline-flex !important">
@@ -468,7 +468,7 @@
                                                                                                 </div>
                                                                                                 <div class="spaceTopSec  selectDiv" style="width: 100%;text-align: left;">
                                                                                                     <div class="spaceMovil">
-                                                                                                        <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;background-color:#5CBBAC;color:#fff;display: flex;align-items: center;justify-content: center;">
+                                                                                                        <div style="display: inline-flex !important;width:40px;height:40px;border-radius:50%;background-color:var(--global-primary);color:#fff;display: flex;align-items: center;justify-content: center;">
                                                                                                             3
                                                                                                         </div>
                                                                                                         &nbsp
@@ -756,7 +756,7 @@
                     $(`#op-${objGlobal}`).css('color','#000');
                 }else{
                     planComplete.kitsTotal.push(NewDataArr)
-                    $(`#op-${objGlobal}`).css('background','#5cbbac');
+                    $(`#op-${objGlobal}`).css('background','var(--global-primary)');
                     $(`#op-${objGlobal}`).css('color','#fff');
                 }
                 

@@ -16,7 +16,7 @@
 </style>
 <body>
     <div class="text-center">
-        <img src="{{ url('images/cropped-Petcicla-1-155x52-2.png')}}" alt="" width="300"> 
+        <img src="{{ url('images/logo.png')}}" alt="" width="300"> 
     </div>
     <div>
         <h2 class="text-center"> Hola , {{$user->name}}</h2>

@@ -53,10 +53,10 @@
             border-radius: 3px;
             transition: background-color .25s ease-in-out;}
         .btn-paginacao ul li label:hover {
-            background-color: #5CBBAC;
+            background-color: var(--global-primary);
             color: #FFF;}
         .btn-paginacao-click {
-            background-color: #5CBBAC !important;
+            background-color: var(--global-primary) !important;
             color: #FFF !important;}
 
             .woocommerce .astra-off-canvas-sidebar-wrapper .astra-off-canvas-sidebar, .woocommerce-page .astra-off-canvas-sidebar-wrapper .astra-off-canvas-sidebar{
@@ -224,7 +224,7 @@
                                         </span>
                                         <span class="price">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi style="color: #5CBBAC !important">
+                                                <bdi style="color: var(--global-primary) !important">
                                                Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-afiliado-{{$item->id}}"> {{$item->precio_afiliados}} </span>
                                                 </bdi>
                                             </span>
@@ -541,7 +541,7 @@
                 new_array_sub = [].concat.apply([], new_array_sub)
 
                 new_array_sub.forEach(element => {
-                    $(`#cat-sub-check-${element}`).empty().append('<i class="fas fa-check-circle"></i>').css('color','#5cbbac')
+                    $(`#cat-sub-check-${element}`).empty().append('<i class="fas fa-check-circle"></i>').css('color','var(--global-primary)')
                 });
 
                 if(new_array_sub.length === 0 ){
@@ -623,7 +623,7 @@
                 }
                 if($(`#cat-check-${params}`).hasClass("active")){
                     if(isOneCategory){
-                        $(`#cat-check-${params}`).empty().append('<i style="color:#fff" class="fas fa-chevron-down"></i>').css('background','#5cbbac')
+                        $(`#cat-check-${params}`).empty().append('<i style="color:#fff" class="fas fa-chevron-down"></i>').css('background','var(--global-primary)')
                         $.ajax({
                             type: "get",
                             url: `/api/enviarSubcategoryPorCategoria`,
@@ -642,7 +642,7 @@
                             },
                         });
                     }else{
-                        $(`#cat-check-${params}`).empty().append('<i style="color:#fff" class="fas fa-chevron-down"></i>').css('background','#5cbbac')
+                        $(`#cat-check-${params}`).empty().append('<i style="color:#fff" class="fas fa-chevron-down"></i>').css('background','var(--global-primary)')
                         $.ajax({
                             type: "get",
                             url: `/api/enviarSubcategoryPorCategoria`,
@@ -790,7 +790,7 @@
                                             </span>
                                             <span class="price">
                                                 <span class="woocommerce-Price-amount amount">
-                                                    <bdi style="color: #5CBBAC !important">
+                                                    <bdi style="color: var(--global-primary) !important">
                                                     Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-afiliado-${element.id}"> ${ formatCurrency(JSON.parse(element.precio_afiliados)) } </span>
                                                     </bdi>
                                                 </span>

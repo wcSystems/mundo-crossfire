@@ -14,7 +14,7 @@
                         <div class="ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
                             <span class="site-logo-img">
                                 <a href="{{ route('/') }}" class="custom-logo-link" rel="home" aria-current="page">
-                                    <img style="max-width: 190px" alt="Shaades Digital Service Pruebas" src="/images/cropped-Petcicla-1-155x52-2.png" class="custom-logo lazyload" />
+                                    <img style="max-width: 190px" alt="Willinthon Tech" src="/images/logo.png" class="custom-logo lazyload" />
                                 </a>
                             </span>
                         </div>
