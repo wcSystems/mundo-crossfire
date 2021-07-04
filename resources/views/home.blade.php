@@ -167,8 +167,9 @@
                                                                                             <div class="elementor-widget-container">
                                                                                                 <div style="text-align: center" class="elementor-button-wrapper">
                                                                                                     <a href="{{$seccion->link}}" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
-                                                                                                        <span class="elementor-button-content-wrapper">
-                                                                                                            <span class="elementor-button-text" >Compra aquí</span>
+                                                                                                        <span  class="elementor-button-content-wrapper " style="display:flex">
+                                                                                                            <i class="fab fa-instagram" style="color:#fff;font-size:20px;margin-right: 10px"></i>
+                                                                                                            <i style="font-size: 20px">Click aqui</i>
                                                                                                         </span>
                                                                                                     </a>
                                                                                                 </div>
