@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" href="{{ asset('css/style-app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/vendors.min.css')}}">
         @yield('styles')
     <!-- END: Vendor CSS-->
@@ -28,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/pages/dashboard-analytics.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/pages/card-analytics.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/plugins/tour/tour.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/style-app.css') }}">
+    
     <!-- END: Page CSS-->
 
 

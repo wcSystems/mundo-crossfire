@@ -10,14 +10,14 @@
     <title>Mundo Crossfire</title>
 
     @yield('meta')
-
+    <link rel="stylesheet" href="{{ asset('css/style-app.css') }}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="apple-touch-icon" href="{{asset('images/ico/ico.ico')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/ico/ico.ico')}}">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C%7CMerriweather%3A700%2C&amp;display=fallback&amp;ver=3.0.1' media='all' />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6' media='all' />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style-app.css') }}">
+    
 
     @yield('css')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
