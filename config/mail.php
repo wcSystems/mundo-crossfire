@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'serviciocliente@petcicla.cl'),
-        'name' => env('MAIL_FROM_NAME', 'Petcicla'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@willinthon.tech'),
+        'name' => env('MAIL_FROM_NAME', 'Mundo Crossfire'),
     ],
 
     /*

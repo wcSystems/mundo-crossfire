@@ -301,13 +301,13 @@ class ShopController extends Controller
                 if($user != null){
                     Auth::login($user, true);
                     Mail::to(Auth::user()->email)->send(new ShopBuyMail($user, $ventas));
-                    Mail::to("serviciocliente@petcicla.cl")->send(new NotificationPetcicla($user, $ventas , 1));
+                    Mail::to("info@willinthon.tech")->send(new NotificationPetcicla($user, $ventas , 1));
                     return redirect('/success/'.$ventas[0]->ticket)->with('ventas', $ventas);
                 }else{
 
                     $user = Cliente_No_Registrado::find($ventas[0]->user_not_register_id);
                     Mail::to($user->email)->send(new ShopBuyMail($user, $ventas));
-                    Mail::to("serviciocliente@petcicla.cl")->send(new NotificationPetcicla($user, $ventas , 1));
+                    Mail::to("info@willinthon.tech")->send(new NotificationPetcicla($user, $ventas , 1));
                     return redirect('/success-invite/'.$ventas[0]->ticket)->with('ventas', $ventas);
                 }
             }else{

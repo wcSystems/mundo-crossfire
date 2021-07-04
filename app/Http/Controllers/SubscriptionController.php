@@ -141,7 +141,7 @@ class SubscriptionController extends Controller
                 // $user->suscribe= true;
                 $user->save();
                 Mail::to($user->email)->send(new RegisterUserMail($user));
-                Mail::to("serviciocliente@petcicla.cl")->send(new NotificationPetcicla($user,false , 3));
+                Mail::to("info@willinthon.tech")->send(new NotificationPetcicla($user,false , 3));
 
                 
 
@@ -267,7 +267,7 @@ class SubscriptionController extends Controller
                 $user->save();
 
                 Mail::to($user->email)->send(new SuscriptionRegisterMail($user, $suscripcion));
-                Mail::to("serviciocliente@petcicla.cl")->send(new NotificationPetcicla($user, $suscripcion , 2));
+                Mail::to("info@willinthon.tech")->send(new NotificationPetcicla($user, $suscripcion , 2));
                 Auth::login($user, true);
                 return redirect('/success/'.$suscripcion->nro_suscripcion.'?suscripcion=1');
             }else{

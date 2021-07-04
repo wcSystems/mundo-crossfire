@@ -548,7 +548,7 @@
                                                                             <h3 class="elementor-image-box-title">Cercanía
                                                                             </h3>
                                                                             <p class="elementor-image-box-description">
-                                                                                Contamos con Petcicla anfitriones que serán
+                                                                                Contamos anfitriones que serán
                                                                                 los facilitadores para recibir y resolver
                                                                                 tus inquietudes a lo largo de todo el
                                                                                 proceso.</p>
