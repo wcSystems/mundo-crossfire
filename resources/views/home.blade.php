@@ -1,9 +1,9 @@
 @extends('app')
 @section('meta')
-    <meta name="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
+    <meta name="description" content="🏋️🦵🏽 Preparador Físico Clases personalizadas y Grupales 🏋️👫 Coach TEFS Coach Crosstraining L3 Personal Training">
     <meta itemprop="name" content="Mundo Crossfire">
-    <meta itemprop="description" content="Productos para mascotas directo a tu hogar, delivery con conciencia, retiramos lo que reciclas, fomentando la economía circular.">
-    <meta itemprop="image" content="{{asset('storage/meta/iso.png')}}">
+    <meta itemprop="description" content="🏋️🦵🏽 Preparador Físico Clases personalizadas y Grupales 🏋️👫 Coach TEFS Coach Crosstraining L3 Personal Training">
+    <meta itemprop="image" content="{{asset('images/ico/ico.ico')}}">
 @endsection
 @section('css')
     <style>

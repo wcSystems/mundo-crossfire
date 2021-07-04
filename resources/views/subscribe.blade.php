@@ -740,7 +740,7 @@
                 $('#kit-individual-M').val(0)
 
                 
-                planComplete.kits = objGlobal.reduce((sum, item) => ( sum + item.precio ), 0);
+                planComplete.kits = objGlobal.reduce((sum, item) => ( sum +  JSON.parse( item.precio ) ), 0);
                 planComplete.kit_id = parseInt((objGlobal[0]) ? objGlobal[0].id : 1)
                 total = ( planComplete.price ) ? planComplete.price + planComplete.kits : planComplete.kits
                 displayGlobal()
@@ -772,7 +772,7 @@
                 $('#kit-individual-D').val(0)
                 
                 
-                planComplete.kits = (planComplete.kitsTotal).reduce((sum, item) => ( sum + item.precio ), 0);
+                planComplete.kits = (planComplete.kitsTotal).reduce((sum, item) => ( sum +  JSON.parse( item.precio ) ), 0);
                 planComplete.kit_id = objGlobal
                 total = ( planComplete.price ) ? planComplete.price + planComplete.kits : planComplete.kits
                 displayGlobal()
@@ -823,8 +823,8 @@
         $('#nameDescriptionPlan').empty().append(JSON.parse($('#plan-suscribe').val()).descripcion_paquete)
         $('#nameTimesPlan').empty().append($('#timeSuscribe').val())
         $('#pricePlan').empty().append(`$ ${formatCurrency(planComplete.price)}`)
-        $('#kitsTotal').empty().append(`${formatCurrency(planComplete.kits)}%+`)
-        $('#totalglobal').empty().append(`$ ${formatCurrency( ((planComplete.price/100)*planComplete.kits) + planComplete.price )}`)
+        $('#kitsTotal').empty().append(`${formatCurrency(JSON.parse(planComplete.kits))}%+`)
+        $('#totalglobal').empty().append(`$ ${formatCurrency( JSON.parse( ((planComplete.price/100)*planComplete.kits) ) + planComplete.price )}`)
     }
     changeTimeSuscribe()
     ofertasForeach()
