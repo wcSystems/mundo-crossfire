@@ -348,53 +348,18 @@
                                                                 <div class="elementor-widget-container">
                                                                     <div class="elementor-image-box-wrapper">
                                                                         <div class="elementor-image-box-content">
-                                                                            <h3 class="elementor-image-box-title">
-                                                                                Somos parte del grupo de trainer certificados de Venezuela 
-                                                                            </h3>
-                                                                            <p class="elementor-image-box-description">
-                                                                                Apoyamos la misión de desarrollar proyectos de transformación a traves del entrenamiento.
-                                                                            </p>
+                                                                            <a href="https://www.instagram.com/cross_firefitness/" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                                                                <span  class="elementor-button-content-wrapper " style="display:flex">
+                                                                                    <i style="font-size: 25px">SIGUENOS EN INSTAGRAM</i>
+                                                                                    <i class="fab fa-instagram" style="color:#fff;font-size:25px;margin-left: 10px"></i>
+                                                                                </span>
+                                                                            </a>
                                                                         </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="elementor-element elementor-element-50d8274 elementor--h-position-center elementor--v-position-middle elementor-arrows-position-inside elementor-pagination-position-inside elementor-widget elementor-widget-slides" data-id="50d8274" data-element_type="widget" data-settings="{&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;transition&quot;:&quot;slide&quot;,&quot;transition_speed&quot;:500}" data-widget_type="slides.default">
-                                                                <div class="elementor-widget-container" >
-                                                                    <div class="elementor-swiper" style="height: 250px !important;display:flex !important;margin-top:-40px" >
-                                                                        <div class="elementor-slides-wrapper elementor-main-swiper swiper-container" style="margin: auto" dir="ltr" data-animation="fadeInUp" >
-                                                                            <div class="swiper-wrapper elementor-slides" >
-                                                                                <div class="elementor-repeater-item-c39dd82 swiper-slide">
-                                                                                    <div style="background-color: #833CA300; background-size: contain;width: 300px;background-repeat: no-repeat;height: 100%;background-position: center;margin: auto;background-image: url(./images/grupocycle-01.png)" ></div>
-                                                                                    <div class="swiper-slide-inner" style="padding: unset !important">
-                                                                                        <div class="swiper-slide-contents"> </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="elementor-repeater-item-26b33b7 swiper-slide">
-                                                                                    <div style="background-color: #833CA300; background-size: contain;width: 300px;background-repeat: no-repeat;height: 100%;background-position: center;margin: auto;background-image:url(./images/NUTRACYCLE-06.png)"   ></div>
-                                                                                    <div class="swiper-slide-inner" style="padding: unset !important">
-                                                                                        <div class="swiper-slide-contents"></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="elementor-repeater-item-c91718a swiper-slide">
-                                                                                    <div style="background-color: #833CA300; background-size: contain;width: 300px;background-repeat: no-repeat;height: 100%;background-position: center;margin: auto;background-image:url(./images/NEOCYCLE-06.png)"   ></div>
-                                                                                    <div class="swiper-slide-inner" style="padding: unset !important">
-                                                                                        <div class="swiper-slide-contents"></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="swiper-pagination"> </div>
-                                                                            <div class="elementor-swiper-button elementor-swiper-button-prev">
-                                                                                <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                                                                                <span class="elementor-screen-only">Previous</span>
-                                                                            </div>
-                                                                            <div class="elementor-swiper-button elementor-swiper-button-next">
-                                                                                <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                                                                                <span class="elementor-screen-only">Next</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <iframe src="https://snapwidget.com/embed/947514" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; pointer-events: none !important;"></iframe>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -487,7 +452,6 @@
                                                                     </div>
                                                                     <div class="marcas_desktop" style="width: 100%">
                                                                         @foreach ($marcas->chunk(6) as $chunk)
-                                                                            <marquee BEHAVIOR="alternate">
                                                                                 <div style="display: flex;margin:20px auto;width:100%">
                                                                                     @foreach ($chunk as $item)
                                                                                         <div class="elementor-element elementor-element-063642c" style="margin: auto;display:flex">
@@ -497,7 +461,6 @@
                                                                                         </div>
                                                                                     @endforeach
                                                                                 </div>
-                                                                            </marquee>
                                                                         @endforeach
                                                                     </div>
                                                                 </div>
@@ -518,11 +481,8 @@
     </div>
 @endsection
 @section('js')
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <script>
-
-        
-        
-
         let number = '+584121482348'
         let message_complete = `*HOME | $}* - ${$('#form-field-message').val()}`;
         let message_complete_ws = message_complete.split(" ").join("%20");
