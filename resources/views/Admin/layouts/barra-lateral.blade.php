@@ -1,12 +1,4 @@
 <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
-    <div class="navbar-header">
-        <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto"><a class="navbar-brand" href="{{route('admin-index')}}">
-                    <img class="rounded" style="background-color: whitesmoke" width="35px" src="{{asset('images/icon-Petcicla.png')}}" alt="">
-                    <h2 class="brand-text mb-0">MCF</h2>
-                </a></li>
-        </ul>
-    </div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class=" navigation-header"><span>Tienda</span>
@@ -19,7 +11,6 @@
                     </li>
                 </ul>
             </li>
-            {{-- <li class=" nav-item"><a href="{{route('admin-envio.index')}}"><i class="fa fa-truck"></i><span class="menu-title" data-i18n="Form Layout">Precio Despacho</span></a> --}}
             <li class="nav-item" id="venta_noti"><a href="{{route('admin-ventas.index')}}" ><i class="fa fa-opencart"></i><span class="menu-title" data-i18n="Productos">Ventas</span>
                 <span id="venta_n"></span>
             </a>

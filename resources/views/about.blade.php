@@ -513,10 +513,6 @@
                                                                 class="elementor-element elementor-element-cc9e17b elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="elementor-image-box-wrapper">
-                                                                        <figure class="elementor-image-box-img"><img
-                                                                                width="175" height="182" alt=""
-                                                                                class="attachment-full size-full lazyloaded"
-                                                                                src="/images/huella.png"></figure>
                                                                         <div class="elementor-image-box-content">
                                                                             <h3 class="elementor-image-box-title">
                                                                                 Sostenibilidad</h3>
