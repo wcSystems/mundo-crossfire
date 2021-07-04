@@ -56,7 +56,7 @@ Route::get('/registro', function () { return view('register'); })->name('registr
 
 //video publicitario - redireccion a youtube -
 Route::get('/conocenos', function () { return view('conocenos'); })->name('conocenos');
-Route::get('/politica-de-privacidad', function () { return view('privacy-policies'); })->name('privacy-policies');
+Route::get('/terminos', function () { return view('privacy-policies'); })->name('privacy-policies');
 
 
 Route::get('subscribe-form',[SubscriptionController::class, 'subscribeForm'])->name('subscribe-form');
