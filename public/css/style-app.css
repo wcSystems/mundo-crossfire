@@ -1,0 +1,15 @@
+:root {
+
+
+    --global-primary: #b00;
+    --global-blue: #00b;
+    --global-fullwidth: 100%;
+
+    --e-global-color-primary: var(--global-primary);
+
+
+
+
+
+
+}

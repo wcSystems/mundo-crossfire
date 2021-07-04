@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/pages/dashboard-analytics.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/pages/card-analytics.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/plugins/tour/tour.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style-app.css') }}">
     <!-- END: Page CSS-->
 
 
@@ -66,4 +67,8 @@
     <!-- BEGIN: Page JS-->
         @yield('script-page')
     <!-- END: Page JS-->
+    <script>
+        let vars_global = {}
+        $.ajax({ url: '/vars', success: function(res) { vars_global = res }});
+    </script>
 </body>

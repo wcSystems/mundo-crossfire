@@ -101,32 +101,34 @@
                                         <div class="elementor-background-overlay"></div>
                                         <div class="size-slider-home elementor-container elementor-column-gap-default">
                                             <div class="elementor-row">
-                                                @if(!isset($banners))
-                                                    <div style="margin:0 !important; padding:0 !important" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b7bcb4e"  data-id="b7bcb4e">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div  class=" elementor-widget-wrap">
-                                                                <div class=" elementor-element elementor-element-0e80b58 elementor--h-position-center elementor--v-position-middle elementor-arrows-position-inside elementor-pagination-position-inside elementor-widget elementor-widget-slides" data-id="0e80b58" data-element_type="widget" data-settings="{&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;transition&quot;:&quot;slide&quot;,&quot;transition_speed&quot;:500}" data-widget_type="slides.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-swiper">
-                                                                            <div class="elementor-slides-wrapper elementor-main-swiper  swiper-container" dir="ltr" data-animation="fadeInUp">
-                                                                                <div class="swiper-wrapper elementor-slides">
-                                                                                    @foreach ($banners as $item)
-                                                                                        <div class="height-movil-banner  elementor-repeater-item-84bbb56 swiper-slide">
-                                                                                            <div  class="swiper-slide-bg" style="background-image:url({{$item->img_banner}});background-repeat: no-repeat;background-size: contain !important;"></div>
-                                                                                            <div class="swiper-slide-inner">
-                                                                                                <div class="swiper-slide-contents"></div>
+                                                @if(isset($banners))
+                                                    @if(count($banners) >= 1)
+                                                        <div style="margin:0 !important; padding:0 !important" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b7bcb4e"  data-id="b7bcb4e">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div  class=" elementor-widget-wrap">
+                                                                    <div class=" elementor-element elementor-element-0e80b58 elementor--h-position-center elementor--v-position-middle elementor-arrows-position-inside elementor-pagination-position-inside elementor-widget elementor-widget-slides" data-id="0e80b58" data-element_type="widget" data-settings="{&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;transition&quot;:&quot;slide&quot;,&quot;transition_speed&quot;:500}" data-widget_type="slides.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-swiper">
+                                                                                <div class="elementor-slides-wrapper elementor-main-swiper  swiper-container" dir="ltr" data-animation="fadeInUp">
+                                                                                    <div class="swiper-wrapper elementor-slides">
+                                                                                        @foreach ($banners as $item)
+                                                                                            <div class="height-movil-banner  elementor-repeater-item-84bbb56 swiper-slide">
+                                                                                                <div  class="swiper-slide-bg" style="background-image:url({{$item->img_banner}});background-repeat: no-repeat;background-size: contain !important;"></div>
+                                                                                                <div class="swiper-slide-inner">
+                                                                                                    <div class="swiper-slide-contents"></div>
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
-                                                                                    @endforeach
-                                                                                </div>
-                                                                                <div class="swiper-pagination"></div>
-                                                                                <div class="elementor-swiper-button elementor-swiper-button-prev">
-                                                                                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                                                                                    <span class="elementor-screen-only">Previous</span>
-                                                                                </div>
-                                                                                <div class="elementor-swiper-button elementor-swiper-button-next">
-                                                                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                                                                                    <span class="elementor-screen-only">Next</span>
+                                                                                        @endforeach
+                                                                                    </div>
+                                                                                    <div class="swiper-pagination"></div>
+                                                                                    <div class="elementor-swiper-button elementor-swiper-button-prev">
+                                                                                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                                                                        <span class="elementor-screen-only">Previous</span>
+                                                                                    </div>
+                                                                                    <div class="elementor-swiper-button elementor-swiper-button-next">
+                                                                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                                                        <span class="elementor-screen-only">Next</span>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -134,7 +136,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    @endif
                                                 @endif
                                                 @if(isset($seccion))
                                                     <div style="z-index:10" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-39d5465"  data-id="39d5465">
@@ -513,6 +515,10 @@
 @endsection
 @section('js')
     <script>
+
+        
+        
+
         let number = '+584121482348'
         let message_complete = `*HOME | $}* - ${$('#form-field-message').val()}`;
         let message_complete_ws = message_complete.split(" ").join("%20");

@@ -191,7 +191,6 @@
                             <li class="ast-col-sm-12 ast-article-post astra-woo-hover-zoom ast-col-md-12 align-center box-shadow-1 box-shadow-3-hover ast-product-gallery-layout-horizontal ast-product-gallery-with-no-image ast-product-tabs-layout-horizontal ast-qv-on-image product type-product post-243 status-publish first instock product_cat-alimentos-para-mascotas has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
                                 <div class="astra-shop-thumbnail-wrap"><a href="/shop-detail/{{$item->slug }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                     <img style="width:100%;height:300px;object-fit: contain" alt="" src="{{$item->img_principal }}"  class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" /></a>
-                                    <a onclick="methodModal({{$item->id }})" style="cursor:pointer" class="ast-quick-view-text" style="cursor:pointer">Vista rápida</a>
                                 </div>
                                 <div class="astra-shop-summary-wrap"> 
                                     <span class="ast-woo-product-category">
@@ -314,7 +313,6 @@
         **
         ** [FUNCIONES EJECUTADAS DESDE OTRA ACCION]
         **  .1  - methodModalLeft(0 o 1)                    => [ Encargada de abrir la modal lateral de filtro de categoria, 1 para abrir, 0 para cerrar ]
-        **  .2  - methodModal(idProduct)                    => [ Encargada de abrir la modal para visualizar productos ]
         **  .3  - formatCurrency(number)                    => [ Encargada de preformatear a valor monetario, (separacion puntos) ]
         **  .4  - sort(obj)                                 => [ Encargada de ordenar cualquier objeto que se le pase ]
         **  .5  - sort_html(number)                         => [ Encargada de alterar el dom con el orden dado ]
@@ -473,48 +471,6 @@
                     $('.woocommerce .astra-off-canvas-sidebar-wrapper .astra-off-canvas-sidebar, .woocommerce-page .astra-off-canvas-sidebar-wrapper .astra-off-canvas-sidebar').css('right', '0')
                 break;
             }
-        }
-        function methodModal(id) {
-            localStorage.removeItem('current_product');
-            req = productos_blade.find(i => i.id === id)
-            localStorage.setItem("current_product", JSON.stringify( req ))
-
-            let precio_html = `<span class="price">
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi>
-                            Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-normal-${req.id}"> ${formatCurrency(JSON.parse(req.precio_no_afiliados))} </span>
-                        </bdi>
-                    </span>
-                </span>
-                <br />`;
-            if(req.indicador_promocion === 1){
-                precio_html += `
-                
-                <span class="price">
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi style="color: #D94F4F !important">
-                            Oferta <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-promocion-${req.id}"> ${formatCurrency(JSON.parse(req.precio_promocion))} </span>
-                        </bdi>
-                    </span>
-                </span>`;
-            }else{
-                precio_html += `
-                
-                <span class="price">
-                    <span class="woocommerce-Price-amount amount">
-                        <bdi style="color: #5CBBAC !important">
-                            Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-producto-afiliado-${req.id}"> ${formatCurrency(JSON.parse(req.precio_afiliados))} </span>
-                        </bdi>
-                    </span>
-                </span>`;
-            }
-            $('#current_product_price').empty().append(precio_html)
-            $('#current_product_img').attr('src', req.img_principal);
-            $('#current_product_title').text(req.titulo)
-            $('#current_product_category').text(req.nombre_categoria)
-            $('#current_product_description').text(req.descripcion)
-            $('.ast-quick-view-bg').addClass('ast-quick-view-bg-ready')
-            $('#ast-quick-view-modal').addClass('open stick-add-to-cart')
         }
         function sort(obj){
             switch (option_sort) {
@@ -787,7 +743,6 @@
                                         
                                         <img style="width:100%;height:300px;object-fit: contain" alt="" src="${element.img_principal}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" /></a>
                                         
-                                        <a onclick="methodModal(${element.id})" style="cursor:pointer" class="ast-quick-view-text" style="cursor:pointer">Vista rápida</a>
                                     </div>
                                     <div class="astra-shop-summary-wrap"> 
 

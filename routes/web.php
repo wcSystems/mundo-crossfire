@@ -161,3 +161,12 @@ Route::get('/auth/check',function(){
     return Auth::check() ? Auth::user()->suscribe : false;
 });
 
+
+//Variables
+Route::get('/vars', function () {
+    return 
+        [ 
+            "color_primary" => "uno", 
+            "color_secondary" => "dos" 
+        ];
+});
