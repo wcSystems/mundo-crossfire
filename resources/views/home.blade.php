@@ -43,7 +43,8 @@
         .entry-content p{
             margin-bottom: 0px !important;}
         .ql-align-center > img{
-            margin: auto !important}
+            margin: auto !important;
+            max-width: 200px !important;}
 
         @media (min-width:498px) {
             .height-movil-banner{
@@ -484,18 +485,19 @@
                                                                     </div>
                                                                     <div class="marcas_desktop" style="width: 100%">
                                                                         @foreach ($marcas->chunk(6) as $chunk)
-                                                                            <div style="display: flex;margin:20px auto;width:100%">
-                                                                                @foreach ($chunk as $item)
-                                                                                    <div class="elementor-element elementor-element-063642c" style="margin: auto;display:flex">
-                                                                                        <div class="elementor-image">
-                                                                                            <img style="max-width: 200px;margin:auto" src="<?php echo $item->img_marcas; ?>"  class="attachment-large size-large lazyload"   />
+                                                                            <marquee BEHAVIOR="alternate">
+                                                                                <div style="display: flex;margin:20px auto;width:100%">
+                                                                                    @foreach ($chunk as $item)
+                                                                                        <div class="elementor-element elementor-element-063642c" style="margin: auto;display:flex">
+                                                                                            <div class="elementor-image">
+                                                                                                <img style="max-width: 200px;margin:auto" src="<?php echo $item->img_marcas; ?>"  class="attachment-large size-large lazyload"   />
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                @endforeach
-                                                                            </div>
+                                                                                    @endforeach
+                                                                                </div>
+                                                                            </marquee>
                                                                         @endforeach
                                                                     </div>
-                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
