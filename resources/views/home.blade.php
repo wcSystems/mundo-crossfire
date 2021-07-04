@@ -42,7 +42,7 @@
             display: block;}
         .entry-content p{
             margin-bottom: 0px !important;}
-        .ql-align-center > img{
+        .ql-align-center > img, .elementor-text-editor > p > img{
             margin: auto !important;
             max-width: 200px !important;}
 
