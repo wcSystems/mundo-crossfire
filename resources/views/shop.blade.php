@@ -194,42 +194,19 @@
                                 </div>
                                 <div class="astra-shop-summary-wrap"> 
                                     <span class="ast-woo-product-category">
-                                        {{-- {{$item->nombre_categoria }} --}}
                                     </span>
                                     <a href="/shop-detail/{{$item->slug }}" class="ast-loop-product__link">
                                         <h2 class="woocommerce-loop-product__title">{{$item->titulo }}</h2>
                                     </a>
-                                    @if($item->indicador_promocion === 1)
                                         <span class="price">
                                             <span class="woocommerce-Price-amount amount">
                                                 <bdi>
-                                                Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-normal-{{$item->id}}"> {{$item->precio_no_afiliados}} </span>
+                                                <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-normal-{{$item->id}}"> {{$item->precio_no_afiliados}} </span>
                                                 </bdi>
                                             </span>
                                         </span>
-                                        <span class="price">
-                                            <span class="woocommerce-Price-amount amount">
-                                                <bdi style="color: #D94F4F !important">
-                                                    Oferta <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-promocion-{{$item->id}}"> {{$item->precio_promocion}}  </span>
-                                                </bdi>
-                                            </span>
-                                        </span>
-                                    @else
-                                        <span class="price">
-                                            <span class="woocommerce-Price-amount amount">
-                                                <bdi>
-                                                    Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-normal-{{$item->id}}"> {{$item->precio_no_afiliados}} </span>
-                                                </bdi>
-                                            </span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="woocommerce-Price-amount amount">
-                                                <bdi style="color: var(--global-primary) !important">
-                                               Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-afiliado-{{$item->id}}"> {{$item->precio_afiliados}} </span>
-                                                </bdi>
-                                            </span>
-                                        </span>
-                                    @endif
+                                        
+                                   
                                 </div>
                             </li>
                         @endforeach
@@ -763,39 +740,17 @@
                                             <h2 class="woocommerce-loop-product__title">${element.titulo}</h2>
                                         </a>`;
 
-                                        if (element.indicador_promocion === 1){
+                                        
                                             categorias_html += `
                                             <span class="price">
                                                 <span class="woocommerce-Price-amount amount">
                                                     <bdi>
-                                                    Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-normal-${element.id}"> ${ formatCurrency(JSON.parse(element.precio_no_afiliados)) } </span>
+                                                    <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-normal-${element.id}"> ${ formatCurrency(JSON.parse(element.precio_no_afiliados)) } </span>
                                                     </bdi>
                                                 </span>
                                             </span>
-                                            <span class="price">
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <bdi style="color: #D94F4F !important">
-                                                        Oferta <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-promocion-${element.id}"> ${ formatCurrency(JSON.parse(element.precio_promocion)) } </span>
-                                                    </bdi>
-                                                </span>
-                                            </span>`;
-                                        }else{
-                                            categorias_html += 
-                                            `<span class="price">
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <bdi>
-                                                        Normal <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-normal-${element.id}"> ${ formatCurrency(JSON.parse(element.precio_no_afiliados)) } </span>
-                                                    </bdi>
-                                                </span>
-                                            </span>
-                                            <span class="price">
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <bdi style="color: var(--global-primary) !important">
-                                                    Socio <span class="woocommerce-Price-currencySymbol">&#36; </span> <span id="format-in-html-product-afiliado-${element.id}"> ${ formatCurrency(JSON.parse(element.precio_afiliados)) } </span>
-                                                    </bdi>
-                                                </span>
-                                            </span>`;
-                                        }
+                                           `;
+                                      
                                         categorias_html += `
                                     </div>
                                 </li>

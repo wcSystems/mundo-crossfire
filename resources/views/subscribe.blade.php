@@ -309,10 +309,10 @@
                                                                                             <div class="elementor-text-editor elementor-clearfix">
 
                                                                                                 <p style="text-align:center;line-height: normal;margin-bottom:0px" class="textNoMovil elementor-heading-title elementor-size-default">
-                                                                                                    Ofertas
+                                                                                                    {{--  --}}
                                                                                                 </p><br />
                                                                                                 <p style="text-align:center;line-height: normal;font-size:14px;margin-bottom:0px !important" class="textNoMovil elementor-heading-title elementor-size-default">
-                                                                                                    Estas ofertas solo estan disponibles al momento de la suscripción
+                                                                                                    {{-- Estas  solo estan disponibles al momento de la suscripción --}}
                                                                                                 </p>
 
                                                                                                 <div id="imgSliderSusc" style="margin: 10px auto;width:600px"  class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b7bcb4e"  data-id="b7bcb4e">
@@ -379,10 +379,10 @@
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div class="textNoMovil" style="display: inline-flex">
-                                                                                                            Selecciona el período de contratación
+                                                                                                            Selecciona el período a entrenar
                                                                                                         </div>
                                                                                                         <div class="textMovil" style="display: inline-flex">
-                                                                                                            Plazo Meses
+                                                                                                            Período
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="textNoMovil" style="margin-top: 0px">
@@ -391,7 +391,7 @@
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div  style="display: inline-flex">
-                                                                                                            Plazo Meses
+                                                                                                            Período
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div style="margin-top: -7px;" class="margin26">
@@ -402,8 +402,8 @@
                                                                                                         <div class="selectDiv" style="display: inline-flex !important">
                                                                                                             <div class="select"  style="display: inline-flex !important;width:180px">
                                                                                                                 <select name="" onchange="changeTimeSuscribe()" id="timeSuscribe">
+                                                                                                                    <option value="1 Mes">1 Mes</option>
                                                                                                                     <option value="3 Meses">3 Meses</option>
-                                                                                                                    <option value="6 Meses">6 Meses</option>
                                                                                                                     <option value="12 Meses">12 Meses</option>
                                                                                                                 </select>
                                                                                                             </div>
@@ -426,10 +426,10 @@
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div class="textNoMovil" style="display: inline-flex">
-                                                                                                            Seleccione visitas de retiro de reciclables por mes
+                                                                                                            Seleccione la modalidad que mas se adapte
                                                                                                         </div>
                                                                                                         <div class="textMovil" style="display: inline-flex">
-                                                                                                            Visitas
+                                                                                                            Modalidad
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="textNoMovil" style="margin-top: 0px">
@@ -438,7 +438,7 @@
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div style="display: inline-flex">
-                                                                                                            Visitas
+                                                                                                            Modalidad
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div style="margin-top: -7px;" class="margin26">
@@ -473,10 +473,10 @@
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div class="textNoMovil" style="display: inline-flex">
-                                                                                                            Puede agregar ofertas de suscripcion (Opcional)
+                                                                                                            Entrenamientos personalizados (Opcional)
                                                                                                         </div>
                                                                                                         <div class="textMovil" style="cursor:pointer;display: inline-flex">
-                                                                                                            Agregar Ofertas
+                                                                                                            Exclusividad
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="textNoMovil" style="margin-top: 0px">
@@ -485,7 +485,7 @@
                                                                                                         </div>
                                                                                                         &nbsp
                                                                                                         <div  style="cursor:pointer;display: inline-flex;margin-top: -20px;">
-                                                                                                            Agregar Ofertas
+                                                                                                            Exclusividad
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div id="html-kits" style="margin-top: -7px;"></div>
@@ -509,7 +509,7 @@
                                                                                                         <p id="pricePlan" style="margin-bottom: 0.6em;"></p>
                                                                                                     </div>
                                                                                                     <div>
-                                                                                                        <p style="margin-bottom: 0px">Total Ofertas</p>
+                                                                                                        <p style="margin-bottom: 0px">Total Exclusividad</p>
                                                                                                         <p id="kitsTotal" style="margin-bottom: 0.6em;"></p>
                                                                                                     </div>
                                                                                                     <div>
@@ -552,10 +552,10 @@
                                                                                         <div class="elementor-widget-container">
                                                                                             <div class="elementor-text-editor elementor-clearfix">
                                                                                                 <p style="text-align:center;line-height: normal;margin-bottom:0px" class="textNoMovil elementor-heading-title elementor-size-default">
-                                                                                                    Ofertas
+                                                                                                   {{--   --}}
                                                                                                 </p>
                                                                                                 <p style="text-align:center;line-height: normal;font-size:14px" class="textNoMovil elementor-heading-title elementor-size-default">
-                                                                                                    Estas ofertas solo estan disponibles al momento de la suscripción
+                                                                                                    {{-- Estas  solo estan disponibles al momento de la suscripción --}}
                                                                                                 </p>
                                                                                                 <div id="imgSliderSusc" style="margin: 10px auto;width:600px"  class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b7bcb4e"  data-id="b7bcb4e">
                                                                                                     <div class="elementor-column-wrap elementor-element-populated">
@@ -628,11 +628,11 @@
 @endsection
 @section('js')
 <script>
-    let statePlanSuscribeTime = 03
+    let statePlanSuscribeTime = 1
     let idGlobalPlan = 1
     let nameGlobalPlan = 'plan 15'
     let nameDescriptionPlan = '2 Visitas al mes'
-    let nameTimesPlan = '3 Meses'
+    let nameTimesPlan = '1 Mes'
     let imgPlanGlobal = ''
     let planComplete = {time:'', price:'', kits:0, paquete_id: 0,paqueteName: '', kit_id: 0, kitsTotal:[]}
     let kit_blade = ( {!! $kits !!} ) ?  {!! $kits !!} : []
@@ -648,7 +648,7 @@
                                 <select onchange="changeKitSuscribe('desktop')" name=""   class="" id="kit-individual-D">
                                     <option value="0" id="placeholderExt-D" disabled selected>Sin Seleccion</option>`;
                                     kit_blade.forEach(element => {
-                                        html += `<option id="op-${ element.id }" value="${ element.id }"> ${ element.nombre_kit } - $ ${ formatCurrency(element.precio) } </option>`;
+                                        html += `<option id="op-${ element.id }" value="${ element.id }"> ${ element.nombre_kit } - ${ formatCurrency(element.precio) }%+ </option>`;
                                     });
                         html+=`</select>
                             </div>
@@ -661,9 +661,9 @@
                             <div class="select"  style="display: inline-flex !important;width:180px  ">
                                 <select multiple onchange="changeKitSuscribe('mobile')" name=""   id="kit-individual-M">
                                     <option value="0" id="placeholderExt-M" disabled selected hidden>Sin Seleccion</option>
-                                    <option value="" id="placeholderExt-M" disabled style="text-align:center" >Puedes agregar mas de 1 oferta</option>`;
+                                    <option value="" id="placeholderExt-M" disabled style="text-align:center" >Puedes agregar mas de 1 Item</option>`;
                                     kit_blade.forEach(element => {
-                                        html += `<option id="op-${ element.id }" value="${ element.id }"> ${ element.nombre_kit } - $ ${ formatCurrency(element.precio) } </option>`;
+                                        html += `<option id="op-${ element.id }" value="${ element.id }"> ${ element.nombre_kit } - ${ formatCurrency(element.precio) }%+ </option>`;
                                     });
                         html+=`</select>
                             </div>
@@ -675,20 +675,20 @@
         let req = $('#timeSuscribe').val()
         let total = ( planComplete.kits ) ? planComplete.price + planComplete.kits : planComplete.price
         switch (req) {
-            case '3 Meses':
-                statePlanSuscribeTime = '03'
+            case '1 Mes':
+                statePlanSuscribeTime = 1
                 total = ( planComplete.kits ) ? planComplete.price + planComplete.kits : planComplete.price
                 break;
-            case '6 Meses':
-                statePlanSuscribeTime = '06'
+            case '3 Meses':
+                statePlanSuscribeTime = 3
                 total = ( planComplete.kits ) ? planComplete.price + planComplete.kits : planComplete.price
                 break;
             case '12 Meses':
-                statePlanSuscribeTime = '12'
+                statePlanSuscribeTime = 12
                 total = ( planComplete.kits ) ? planComplete.price + planComplete.kits : planComplete.price
                 break;
             default:
-                statePlanSuscribeTime = '03'
+                statePlanSuscribeTime = 1
                 total = ( planComplete.kits ) ? planComplete.price + planComplete.kits : planComplete.price
                 break;
         }
@@ -730,9 +730,9 @@
 
                 if((planComplete.kitsTotal).length >= 1 ){
                     if(planComplete.kitsTotal.length === 1){
-                        $('#placeholderExt-M').text(`${planComplete.kitsTotal.length} Oferta`)
+                        $('#placeholderExt-M').text(`${planComplete.kitsTotal.length} Item`)
                     }else{
-                        $('#placeholderExt-M').text(`${planComplete.kitsTotal.length} Ofertas`)
+                        $('#placeholderExt-M').text(`${planComplete.kitsTotal.length} Items`)
                     }
                 }else{
                     $('#placeholderExt-M').text(`Sin Seleccion`)
@@ -762,9 +762,9 @@
                 
                 if(planComplete.kitsTotal.length >= 1 ){
                     if(planComplete.kitsTotal.length === 1){
-                        $('#placeholderExt-D').text(`${planComplete.kitsTotal.length} Oferta`)
+                        $('#placeholderExt-D').text(`${planComplete.kitsTotal.length} Item`)
                     }else{
-                        $('#placeholderExt-D').text(`${planComplete.kitsTotal.length} Ofertas`)
+                        $('#placeholderExt-D').text(`${planComplete.kitsTotal.length} Items`)
                     }
                 }else{
                     $('#placeholderExt-D').text(`Sin Seleccion`)
@@ -803,13 +803,13 @@
     function formatPackageReturn(statePlanSuscribeTime,req) {
         let package = {!! $packages !!}.find( i => i.id === req )
         switch (statePlanSuscribeTime) {
-            case '03':
+            case 1:
                 return package.precio_3
                 break;
-            case '06':
+            case 3:
                 return package.precio_6
                 break;
-            case '12':
+            case 12:
                 return package.precio_12
                 break;
         }
@@ -823,8 +823,8 @@
         $('#nameDescriptionPlan').empty().append(JSON.parse($('#plan-suscribe').val()).descripcion_paquete)
         $('#nameTimesPlan').empty().append($('#timeSuscribe').val())
         $('#pricePlan').empty().append(`$ ${formatCurrency(planComplete.price)}`)
-        $('#kitsTotal').empty().append(`$ ${formatCurrency(planComplete.kits)}`)
-        $('#totalglobal').empty().append(`$ ${formatCurrency(planComplete.kits + planComplete.price )}`)
+        $('#kitsTotal').empty().append(`${formatCurrency(planComplete.kits)}%+`)
+        $('#totalglobal').empty().append(`$ ${formatCurrency( ((planComplete.price/100)*planComplete.kits) + planComplete.price )}`)
     }
     changeTimeSuscribe()
     ofertasForeach()
