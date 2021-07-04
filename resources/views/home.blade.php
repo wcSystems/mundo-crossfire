@@ -150,10 +150,10 @@
                                                                         <?php echo $seccion->texto; ?>
                                                                     </div>
                                                                 </div>
-                                                                <div class="elementor-element elementor-element-30e77c9 elementor-widget elementor-widget-image" data-id="30e77c9" data-element_type="widget" data-widget_type="image.default">
+                                                                <div style="margin: 20px auto !important" class="elementor-element elementor-element-30e77c9 elementor-widget elementor-widget-image" data-id="30e77c9" data-element_type="widget" data-widget_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img style="width:100%;height:135px;object-fit: contain"   alt="" src="{{$seccion->img}}">										
+                                                                            <img style="height:250px;object-fit: contain; border-radius: 50%"   alt="" src="{{$seccion->img}}">										
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -168,7 +168,6 @@
                                                                                                 <div style="text-align: center" class="elementor-button-wrapper">
                                                                                                     <a href="{{$seccion->link}}" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
                                                                                                         <span class="elementor-button-content-wrapper">
-                                                                                                            
                                                                                                             <span class="elementor-button-text" >Compra aquí</span>
                                                                                                         </span>
                                                                                                     </a>
