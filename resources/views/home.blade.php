@@ -187,7 +187,7 @@
                                     </section>
 
                                     @if(isset($caja1) || isset($caja2) || isset($caja3) )
-                                        <section style="background-color: #51B6B2 !important" class="box-expand-pd elementor-section elementor-top-section elementor-element elementor-element-3634f3d elementor-section-boxed elementor-section-height-default elementor-section-height-default"  data-id="3634f3d"  data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <section style="background-color: var(--global-tercer) !important" class="box-expand-pd elementor-section elementor-top-section elementor-element elementor-element-3634f3d elementor-section-boxed elementor-section-height-default elementor-section-height-default"  data-id="3634f3d"  data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                             <div class="elementor-container elementor-column-gap-default" style="max-width: 100% !important">
                                                 <div class="elementor-row" style="justify-content: center;" >
                                                     @if(isset($caja1))
