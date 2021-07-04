@@ -116,7 +116,7 @@
                                                                                     <div class="swiper-wrapper elementor-slides">
                                                                                         @foreach ($banners as $item)
                                                                                             <div class="height-movil-banner  elementor-repeater-item-84bbb56 swiper-slide">
-                                                                                                <div  class="swiper-slide-bg" style="background-image:url({{$item->img_banner}});background-repeat: no-repeat;background-size: contain !important;"></div>
+                                                                                                <div  class="swiper-slide-bg" style="background-image:url(<?php echo $item->img_banner; ?> );background-repeat: no-repeat;background-size: contain !important;"></div>
                                                                                                 <div class="swiper-slide-inner">
                                                                                                     <div class="swiper-slide-contents"></div>
                                                                                                 </div>
@@ -153,7 +153,7 @@
                                                                 <div style="margin: 20px auto !important" class="elementor-element elementor-element-30e77c9 elementor-widget elementor-widget-image" data-id="30e77c9" data-element_type="widget" data-widget_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img style="height:250px;object-fit: contain; border-radius: 50%"   alt="" src="{{$seccion->img}}">										
+                                                                            <img style="height:250px;object-fit: contain; border-radius: 50%"   alt="" src="<?php echo $seccion->img; ?>">										
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -287,7 +287,7 @@
                                                                                         <li class="ast-article-single align-center box-shadow-1 box-shadow-3-hover ast-product-gallery-layout-horizontal ast-product-gallery-with-no-image ast-product-tabs-layout-horizontal ast-qv-on-image product type-product post-243 status-publish first instock product_cat-alimentos-para-mascotas has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
                                                                                             <div class="astra-shop-thumbnail-wrap">
                                                                                                 <a href="{{ route('shop-detail',$producto->slug) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                                                                                    <img style="width:100%;height:100%;height:300px;object-fit: contain" alt="" src="{{asset($producto->img_principal)}}" class="imgDestacados attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" />
+                                                                                                    <img style="width:100%;height:100%;height:300px;object-fit: contain" alt="" src="<?php echo $producto->img_principal; ?>" class="imgDestacados attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" />
                                                                                                 </a>
                                                                                             </div>
                                                                                             <div class="astra-shop-summary-wrap">
