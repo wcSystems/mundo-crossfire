@@ -4,6 +4,8 @@
     <meta itemprop="name" content="Mundo Crossfire">
     <meta itemprop="description" content="🏋️🦵🏽 Preparador Físico Clases personalizadas y Grupales 🏋️👫 Coach TEFS Coach Crosstraining L3 Personal Training">
     <meta itemprop="image" content="{{ Storage::url('logos/logo2.png/') }} ">
+    <meta property="og:image" content="{{ Storage::url('logos/logo2.png/') }}">
+    <meta name="twitter:image" content="{{ Storage::url('logos/logo2.png/') }}">
 @endsection
 @section('css')
     <style>
