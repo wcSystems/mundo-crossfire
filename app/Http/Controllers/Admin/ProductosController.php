@@ -228,8 +228,7 @@ class ProductosController extends Controller
         $archivos=Productos_Foto::where('producto_id',$id)->get('img');
             
         foreach($archivos as $archivo){
-            $route = explode("/", $archivo->img);
-            Storage::delete('productos/'.$route[3]);
+            Storage::delete('products/'.$archivo->img);
         }
 
     
@@ -237,6 +236,7 @@ class ProductosController extends Controller
         $pro->ordenados=null;
         $pro->save();
 
+        Productos_Foto::where('producto_id',$id)->delete();
         Producto::find($id)->delete();
         
         return response()->json(['success'=>'Producto Borrado Exitosamente!']);
@@ -248,57 +248,43 @@ class ProductosController extends Controller
 
         //PARA CREAR
         if($request->create_edit==0){
-
             if($request->file('imagen')==null){
                 goto salir_crear;
             }
-
             foreach ($request->file('imagen') as $key => $value) {
-            
-                $imageName = time(). $key . '.' . $value->getClientOriginalExtension();
-                Storage::put('productos/'.$imageName,  \File::get($value));
-           
+                $imageName = time().$key.'.'.$value->getClientOriginalExtension();
+                Storage::putFileAs('/products', $value, $imageName);
                 $productos_foto = new Productos_Foto();
                 $productos_foto->producto_id=$id_producto->id;
-                $productos_foto->img='/storage/productos/'.$imageName;
+                $productos_foto->img=$imageName;
                 $productos_foto->save();
-    
             }
-
             $first_photo=Productos_Foto::where('producto_id',$id_producto->id)->first('img');
             Producto::where('id',$id_producto->id)->update(['img_principal' => $first_photo->img]);
-
         }
 
     salir_crear:
 
         //PARA EDITAR
         if($request->create_edit==1){
-
             if($request->file('imagen')!=null){
             
                 // Borra en el storage y el producto
                 $archivos=Productos_Foto::where('producto_id',$request->valor_producto)->get('img');
-                
+    
                 foreach($archivos as $archivo){
-                    $route = explode("/", $archivo->img);
-                    Storage::delete('productos/'.$route[3]);
+                    Storage::delete('products/'.$archivo->img);
                 }
-
                 Productos_Foto::where('producto_id',$request->valor_producto)->delete();
-
 
                 // Crea el producto y almacena el storage
                 foreach ($request->file('imagen') as $key => $value) {
-                
-                    $imageName = time(). $key . '.' . $value->getClientOriginalExtension();
-                    Storage::put('productos/'.$imageName,  \File::get($value));
-            
+                    $imageName = time().$key.'.'.$value->getClientOriginalExtension();
+                    Storage::putFileAs('/products', $value, $imageName);
                     $productos_foto = new Productos_Foto();
                     $productos_foto->producto_id=$request->valor_producto;
-                    $productos_foto->img='/storage/productos/'.$imageName;
+                    $productos_foto->img=$imageName;
                     $productos_foto->save();
-        
                 }
 
 

@@ -173,7 +173,3 @@ Route::get('/vars', function () {
         ];
 });
  
-
-
-//SENDIMGS3
-Route::post('/imgs3',[s3StorageController::class,'index']);

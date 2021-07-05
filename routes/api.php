@@ -115,10 +115,8 @@ Route::get('/show-info-cajas/{id}',[CajasController::class,'enviarInfoCajas'])->
 
 //SENDIMGS3
 Route::post('/imgs3',[CajasController::class,'sendImgS3']);
+
 //TEST PARA IMAGENES DE CAJAS
-
-
-
 Route::post('builder', function (Request $request) {
     return response()->json($request->descripcion_cajas);
 });

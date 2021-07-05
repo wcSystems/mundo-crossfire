@@ -60,7 +60,7 @@
                                                                                         <div class="swiper-wrapper elementor-slides">
                                                                                             @foreach ($imagenes as $item)
                                                                                                 <div class="elementor-repeater-item-84bbb56 swiper-slide">
-                                                                                                    <div class="swiper-slide-bg"  style="background-image:url({{$item->img}}); width:100% !important ; background-size: contain !important;">
+                                                                                                    <div class="swiper-slide-bg"  style="background-image:url({{Storage::url('products/'.$item->img)  }}); width:100% !important ; background-size: contain !important;">
                                                                                                     </div>
                                                                                                     <div class="swiper-slide-inner" >
                                                                                                         <div class="swiper-slide-contents">
@@ -179,7 +179,7 @@
                                                             <li class="ast-article-single ast-woo-product-no-review align-center box-shadow-1 box-shadow-3-hover ast-product-gallery-layout-horizontal ast-product-gallery-with-no-image ast-product-tabs-layout-horizontal ast-qv-on-image product type-product post-242 status-publish first instock product_cat-alimentos-para-mascotas has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
                                                                 <div class="astra-shop-thumbnail-wrap"> 
                                                                     <a href="{{ route('shop-detail', $productos_relacionado->slug) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                                                        <img style="width:100%;height:200px;object-fit: contain"  alt="" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyloaded" src="{{asset($productos_relacionado->img_principal)}}"></a>
+                                                                        <img style="width:100%;height:200px;object-fit: contain"  alt="" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyloaded" src="{{Storage::url('products/'.$productos_relacionado->img_principal)  }} "></a>
                                                                     </div>
                                                                 <div class="astra-shop-summary-wrap"> 
                                                                     <span class="ast-woo-product-category">
@@ -243,11 +243,12 @@
                             <ul class="woocommerce-mini-cart cart_list product_list_widget ">`;
 
                             arr_cart_products.forEach( (element, index) => {
+                                let url_img = "{{ Storage::url('products/image_replace') }}".replace('image_replace', element.img);
                                 list += `
                                 <li class="woocommerce-mini-cart-item mini_cart_item">
                                     <a  class="remove remove_from_cart_button" aria-label="Borrar este artículo" style="cursor:pointer" onclick="deleteItemCart(${index},${element.unit},${element.total})" data-product_sku="">×</a>											
                                     <a href="http://localhost/wordpress/producto/assorted-dry-fruits/">
-                                    <img style="width:100%;height:300px;object-fit: contain"  src="${element.img}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" sizes="(max-width: 300px) 100vw, 300px">${element.titulo}</a>
+                                    <img style="width:100%;height:300px;object-fit: contain"  src="${url_img}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" sizes="(max-width: 300px) 100vw, 300px">${element.titulo}</a>
                                     <span class="quantity">${element.unit} × 
                                         <span class="woocommerce-Price-amount amount"><bdi>
                                         <span class="woocommerce-Price-currencySymbol">$</span>${element.price}</bdi></span>

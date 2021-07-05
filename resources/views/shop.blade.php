@@ -190,7 +190,7 @@
                         @foreach ($productos->take(20) as $item)
                             <li class="ast-col-sm-12 ast-article-post astra-woo-hover-zoom ast-col-md-12 align-center box-shadow-1 box-shadow-3-hover ast-product-gallery-layout-horizontal ast-product-gallery-with-no-image ast-product-tabs-layout-horizontal ast-qv-on-image product type-product post-243 status-publish first instock product_cat-alimentos-para-mascotas has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
                                 <div class="astra-shop-thumbnail-wrap"><a href="/shop-detail/{{$item->slug }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                    <img style="width:100%;height:300px;object-fit: contain" alt="" src="{{$item->img_principal }}"  class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" /></a>
+                                    <img style="width:100%;height:300px;object-fit: contain" alt="" src="{{ Storage::url('products/'.$item->img_principal) }}"  class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" /></a>
                                 </div>
                                 <div class="astra-shop-summary-wrap"> 
                                     <span class="ast-woo-product-category">
@@ -712,13 +712,13 @@
                 $('#contador-products-list').text(`Sin Resultados de productos`)
             }else{
                 arr_box_data.forEach(element => {
-                                   
+                            let url_img = "{{ Storage::url('products/image_replace') }}".replace('image_replace', element.img_principal);
                             categorias_html += `
                                 <li class="ast-col-sm-12 ast-article-post astra-woo-hover-zoom ast-col-md-12 align-center box-shadow-1 box-shadow-3-hover ast-product-gallery-layout-horizontal ast-product-gallery-with-no-image ast-product-tabs-layout-horizontal ast-qv-on-image product type-product post-243 status-publish first instock product_cat-alimentos-para-mascotas has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
                                     <div class="astra-shop-thumbnail-wrap"><a href="/shop-detail/${element.slug }" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 
                                         
-                                        <img style="width:100%;height:300px;object-fit: contain" alt="" src="${element.img_principal}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" /></a>
+                                        <img style="width:100%;height:300px;object-fit: contain" alt="" src="${url_img}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail lazyload" /></a>
                                         
                                     </div>
                                     <div class="astra-shop-summary-wrap"> 

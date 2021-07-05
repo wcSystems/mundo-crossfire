@@ -281,13 +281,14 @@
         costo_despacho(0)
         let arrCart = ``
         arr_cart_productss.forEach( (element, index) => {
+            let url_img = "{{ Storage::url('products/image_replace') }}".replace('image_replace', element.img);
                 arrCart += `
                 <tr class="woocommerce-cart-form__cart-item cart_item">
                     <td class="product-remove">
                         <a onclick="deleteItemCarts(${index},${element.unit},${element.total})" style="cursor:pointer" class="remove" aria-label="Borrar este artículo" data-product_id="245" data-product_sku="">×</a>						
                     </td>
                     <td class="product-thumbnail">
-                        <a ><img width="300" height="300" alt="" src="${element.img}" ></a>						
+                        <a ><img width="300" height="300" alt="" src="${url_img}" ></a>						
                     </td>
 
                     <td class="product-name" data-title="Producto">
@@ -326,11 +327,12 @@
                            <ul class="woocommerce-mini-cart cart_list product_list_widget ">`;
 
                            arr_cart_products.forEach( (element, index) => {
+                            let url_img = "{{ Storage::url('products/image_replace') }}".replace('image_replace', element.img);
                                list += `
                                <li class="woocommerce-mini-cart-item mini_cart_item">
                                    <a  class="remove remove_from_cart_button" aria-label="Borrar este artículo" style="cursor:pointer" onclick="deleteItemCart(${index},${element.unit},${element.total})" data-product_sku="">×</a>											
                                    <a href="http://localhost/wordpress/producto/assorted-dry-fruits/">
-                                   <img width="300" height="300" src="${element.img}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" sizes="(max-width: 300px) 100vw, 300px">${element.titulo}</a>
+                                   <img width="300" height="300" src="${url_img}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" sizes="(max-width: 300px) 100vw, 300px">${element.titulo}</a>
                                    <span class="quantity">${element.unit} × 
                                        <span class="woocommerce-Price-amount amount"><bdi>
                                        <span class="woocommerce-Price-currencySymbol">$</span><span id="format-in-html-modal-emergente-${index}">${element.price}</span></bdi></span>
