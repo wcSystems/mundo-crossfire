@@ -107,6 +107,13 @@
                     <h4 class="modal-title" id="modelHeading"></h4>
                 </div>
                 <div class="modal-body">
+
+                    <form id="formFile" name="formFile" class="form-horizontal" enctype="multipart/form-data" method="post">
+                        @csrf
+                        <input type="file" style="display:none" name="file" id="file" value="">
+                    </form>
+
+
                     <form id="productForm" name="productForm" class="form-horizontal" enctype="multipart/form-data" method="post">
                         @csrf
                         <input type="hidden" name="cajas_id" id="cajas_id" value="">

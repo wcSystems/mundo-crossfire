@@ -27,6 +27,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Publico\ShopController;
 use App\Http\Controllers\Publico\HomeController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\s3StorageController;
+
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -170,3 +172,8 @@ Route::get('/vars', function () {
             "color_secondary" => "dos" 
         ];
 });
+ 
+
+
+//SENDIMGS3
+Route::post('/imgs3',[s3StorageController::class,'index']);

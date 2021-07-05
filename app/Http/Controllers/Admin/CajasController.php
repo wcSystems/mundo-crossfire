@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cajas;
 
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+
+use File;
+
 class CajasController extends Controller
 {
     /**
@@ -28,7 +33,7 @@ class CajasController extends Controller
      */
     public function create()
     {
-        //
+        return response()->json(['success'=>'create']);
     }
 
     /**
@@ -96,5 +101,12 @@ class CajasController extends Controller
 
         $contenido=Cajas::select('contenido')->wherenumero($id)->get();
         return response()->json(['contenido'=> $contenido]);
+    }
+    public function sendImgS3(Request $request)
+    {
+        $image = $request->file('file');
+        $imageName = time().'.'.$image->getClientOriginalName();
+        Storage::putFileAs('/cajas', $image, $imageName);
+        return response()->json(['success'=>$imageName]);
     }
 }
