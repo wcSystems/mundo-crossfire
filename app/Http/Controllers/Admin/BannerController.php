@@ -36,8 +36,7 @@ class BannerController extends Controller
     }
     public function edit($id)
     {
-        $banner= Banner::find($id);
-        return response()->json($banner);
+        return response()->json(Banner::find($id));
     }
     public function store(Request $request)
     {
@@ -52,7 +51,6 @@ class BannerController extends Controller
         }
         //PARA EDITAR
         if($request->create_edit==1){
-            //BORRO LA IMAGEN
             $name=Banner::where('id',$request->banner_id)->get('img_banner')[0]['img_banner'];
             Storage::delete('banners/'.$name);
             $image = $request->file('file');

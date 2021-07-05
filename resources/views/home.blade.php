@@ -116,7 +116,7 @@
                                                                                     <div class="swiper-wrapper elementor-slides">
                                                                                         @foreach ($banners as $item)
                                                                                             <div class="height-movil-banner  elementor-repeater-item-84bbb56 swiper-slide">
-                                                                                                <div  class="swiper-slide-bg" style="background-image:url({{Storage::url($item->img_banner)}});background-repeat: no-repeat;background-size: contain !important;"></div>
+                                                                                                <div  class="swiper-slide-bg" style="background-image:url({{Storage::url('banners/'.$item->img_banner)}});background-repeat: no-repeat;background-size: contain !important;"></div>
                                                                                                 <div class="swiper-slide-inner">
                                                                                                     <div class="swiper-slide-contents"></div>
                                                                                                 </div>
