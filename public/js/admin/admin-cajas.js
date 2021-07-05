@@ -90,34 +90,13 @@ $(function () {
 
     });
     
-
-
-    function urltoFile(url, filename, mimeType){
-        mimeType = mimeType || (url.match(/^data:([^;]+);/)||'')[1];
-        return (fetch(url)
-            .then(function(res){return res.arrayBuffer();})
-            .then(function(buf){return new File([buf], filename, {type:mimeType});})
-        );
-    }
-
-
-
-    let files = [];
-
-
-
+    let files = []
     $('#saveBtn').click(function (e) {
-        files = []
         e.preventDefault();
         $('#id_description').val($('#description_editor .ql-editor').html());
-
         var form_data = new FormData(document.getElementById("productForm"));
         var input_descripcion= document.getElementById('id_description').value;
-    
-      
-
-        /* if ((input_descripcion == "") || (input_descripcion=='<p><br></p>')) {
-            
+        if ((input_descripcion == "") || (input_descripcion=='<p><br></p>')) {
             Swal.fire({
                 type: 'error',
                 text: 'Por Favor Ingrese Una Descripcion!',
@@ -125,126 +104,17 @@ $(function () {
                 buttonsStyling: false,
             })
             return false;
-        } */
-
-
-        
-        
-
-        
-
-
-
-        let data_send = new FormData(document.getElementById("productForm"))
+        }
         $.ajax({
-            data: data_send,
-            url: "api/builder",
+            data: form_data,
+            url: "/admin-cajas",
             type: "POST",
             dataType: 'json',
             cache: false,
             contentType: false,
             processData: false,
             success: function (data) {
-                $($(data)).each(function( index,p ) {
-                    $('img[src*="data:image"]').each(function( index,d ) {
-
-
-                        
-                        fetch(this.src)
-                        .then(res => res.blob())
-                        .then(blob => {
-                            files.push(new File([blob], 'image.jpeg', {type: blob.type}));
-                           
-
-
-                                let formFile = new FormData(document.getElementById("formFile"))
-                                formFile.append('file', this.src);
-                          
-
-
-
-                                $.ajax({
-                                    data: formFile,
-                                    url: "imgs3",
-                                    type: "POST",
-                                    processData: false,
-                                    contentType: false,
-                                    success: function (imgTos3) { console.log(imgTos3) },
-                                    error: function (data) { console.log('Error:', data);}
-                                });
-
-
-
-
-
-
-
-
-
-
-                        })
-
-               
-
-                        //urltoFile(this.src, `image-box-${index+1}`).then(function(file){
-
-                            //$('#cajas_file').file(file)
-
-                            //console.log(file)
-
-
-                            
-                            
-                        //}) 
-                    });
-                });
-
-
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                /* $('#productForm').trigger("reset");
+                $('#productForm').trigger("reset");
                 $('#ajaxModel').modal('hide');
                 Swal.fire({
                         type: "success",
@@ -252,13 +122,44 @@ $(function () {
                         text: data.success,
                         confirmButtonClass: 'btn btn-success',
                 })
-                location.reload() */
+                location.reload()
             },
             error: function (data) {
                 console.log('Error:', data);
             }
         });
+        // REVISAR LOGICA PARA SACAR LA IMAGEN, CONVERTIRLA DE BASE64 A FILE Y ALMACENARLA EN S3
+        // $.ajax({
+        //     data: new FormData(document.getElementById("productForm")),
+        //     url: "api/builder",
+        //     type: "POST",
+        //     dataType: 'json',
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (data) {
+        //         $($(data)).each(function( index,p ) {
+        //             $('img[src*="data:image"]').each(function( index,d ) {
+        //                 fetch(this.src).then(res => res.blob()).then(blob => {
+        //                     files.push(new File([blob], 'image.jpeg', {type: blob.type}));
+        //                     $.ajax({
+        //                         data: files[0],
+        //                         url: "imgs3",
+        //                         type: "POST",
+        //                         headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        //                         processData: false,
+        //                         contentType: false,
+        //                         success: function (imgTos3) { console.log(imgTos3) },
+        //                         error: function (data) { console.log('Error:', data);}
+        //                     });
+        //                 })
+        //             });
+        //         });
+        //     }, error: function (data) { console.log('Error:', data); }
+        // });
     });
+
+
 
     $('body').on('click', '.clear', function (){
         var cajas_id = $(this).data("id");
