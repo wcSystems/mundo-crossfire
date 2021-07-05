@@ -22,8 +22,7 @@ class SeccionHomeController extends Controller
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('image', function ($data) { 
-                        $url= asset($data->img);
-                        return '<img src="'.$url.'" border="0" width="40" class="img-rounded" align="center" />';
+                        return '<img src="'.Storage::url('seccion/'.$data->img).'" border="0" width="40" class="img-rounded" align="center" />';
                     })
                     ->editColumn('updated_at', function ($request) {
                         return $request->updated_at->format('Y-m-d'); 
@@ -38,133 +37,48 @@ class SeccionHomeController extends Controller
                     ->rawColumns(['image','action'])
                     ->make(true);
         }
-
         $count=Seccion::count();
-
         return view('Admin.seccion')->with('count',$count);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-         //PARA CREAR
-         if($request->create_edit==0){
-
-            if ($request->file('img_seccion')) {
-                $imagePath = $request->file('img_seccion');
-                $imageName = time().'.'.$imagePath->getClientOriginalName();
-                $imagePath->move(storage_path('app/public/seccion'),$imageName);
-            }
-
+        // CREAR
+        if($request->create_edit==0){
+            $image = $request->file('img_seccion');
+            $imageName = time().'.'.$image->getClientOriginalName();
+            Storage::putFileAs('/seccion', $image, $imageName);
             $seccion = new Seccion();
             $seccion->link=$request->link;
             $seccion->texto=$request->descripcion_seccion;
-            $seccion->img='/storage/seccion/'.$imageName;
+            $seccion->img=$imageName;
             $seccion->save();
-
         }
-
-        //EDICION
+        //PARA EDITAR
         if($request->create_edit==1){
-
-            $id=$request->seccion_id;
-
             if ($request->file('img_seccion')==null) {
-                Seccion::where('id',$id)->update(['link' => $request->link,
-                'texto'=>$request->descripcion_seccion]);
-            }
-            else{
-
-                //BORRAR IMAGEN 
-                $archivos=Seccion::where('id',$id)->get('img');
-                foreach($archivos as $archivo){
-                    $route = explode("/", $archivo->img);
-                    Storage::delete('seccion/'.$route[3]);
-                }
-
-                //SUBO IMAGEN AL STORAGE
-                $imagePath = $request->file('img_seccion');
-                $imageName = time().'.'.$imagePath->getClientOriginalName();
-                $imagePath->move(storage_path('app/public/seccion'),$imageName);
-
-                Seccion::where('id',$id)->update(['link' => $request->link,
+                Seccion::where('id',$request->seccion_id)->update(['link' => $request->link,'texto'=>$request->descripcion_seccion]);
+            }else{
+                $name=Seccion::where('id',$request->seccion_id)->get('img')[0]['img'];
+                Storage::delete('seccion/'.$name);
+                $image = $request->file('img_seccion');
+                $imageName = time().'.'.$image->getClientOriginalName();
+                Storage::putFileAs('/seccion', $image, $imageName);
+                Seccion::where('id',$request->seccion_id)->update(['link' => $request->link,
                                           'texto'=>$request->descripcion_seccion,
-                                          'img'=>'/storage/seccion/'.$imageName]);
-
+                                          'img'=>$imageName]);
             }
-
         }
-
         return response()->json(['success'=>'Seccion Guardado.']);
-
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $seccion= Seccion::find($id);
-        return response()->json($seccion);
-    }
+    public function edit($id){ return response()->json($seccion= Seccion::find($id)); }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $seccion= Seccion::find($id);
-        return response()->json($seccion);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        $archivos=Seccion::where('id',$id)->get('img');
-        foreach($archivos as $archivo){
-            $route = explode("/", $archivo->img);
-            Storage::delete('seccion/'.$route[3]);
-        }
-
+        $name=Seccion::where('id',$id)->get('img')[0]['img'];
+        Storage::delete('seccion/'.$name);
         Seccion::find($id)->delete();
-        return response()->json(['success'=>'Seccion Borrado Exitosamente!']);
+        return response()->json(['success'=>$name]);
     }
 }

@@ -34,10 +34,9 @@ class BannerController extends Controller
         }
         return view('Admin.banner');
     }
-    public function edit($id)
-    {
-        return response()->json(Banner::find($id));
-    }
+
+    public function edit($id) { return response()->json(Banner::find($id)); }
+    
     public function store(Request $request)
     {
         // CREAR
@@ -60,6 +59,7 @@ class BannerController extends Controller
         }
         return response()->json(['success'=>'Banner Guardado.']);
     }
+
     public function destroy($id)
     {
         $name=Banner::where('id',$id)->get('img_banner')[0]['img_banner'];

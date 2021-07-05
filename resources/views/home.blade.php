@@ -153,7 +153,7 @@
                                                                 <div style="margin: 20px auto !important" class="elementor-element elementor-element-30e77c9 elementor-widget elementor-widget-image" data-id="30e77c9" data-element_type="widget" data-widget_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
-                                                                            <img style="height:250px;object-fit: contain; border-radius: 50%"   alt="" src="<?php echo $seccion->img; ?>">										
+                                                                            <img style="height:250px;object-fit: contain; border-radius: 50%"   alt="" src="{{Storage::url('seccion/'.$seccion->img)}}">										
                                                                         </div>
                                                                     </div>
                                                                 </div>
