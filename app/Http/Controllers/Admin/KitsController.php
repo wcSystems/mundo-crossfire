@@ -23,8 +23,7 @@ class KitsController extends Controller
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('image', function ($data) { 
-                        $url= asset($data->img_kit);
-                        return '<img src="'.$url.'" border="0" width="40" class="img-rounded" align="center" />';
+                        return '<img src="'.Storage::url('plus/'.$data->img_kit).'" border="0" width="40" class="img-rounded" align="center" />';
                      })
                      ->addColumn('descripcion', function ($data) { 
                         return $data->descripcion_kit;
@@ -67,19 +66,16 @@ class KitsController extends Controller
         if($request->create_edit==0){
 
             if ($request->file('img_kit')) {
-                $imagePath = $request->file('img_kit');
-                $imageName = time().'.'.$imagePath->getClientOriginalName();
-                $imagePath->move(storage_path('app/public/kits'),$imageName);
+                $image = $request->file('img_kit');
+                $imageName = time().'.'.$image->getClientOriginalName();
+                Storage::putFileAs('/plus', $image, $imageName);
             }
-
             $kit = new Kit();
             $kit->nombre_kit=$request->nombre_kit;
             $kit->descripcion_kit=$request->descripcion_kit;
             $kit->precio=$request->precio;
-            //$kit->precio_suscripcion=$request->precio_suscripcion;
-            $kit->img_kit='/storage/kits/'.$imageName;
+            $kit->img_kit=$imageName;
             $kit->save();
-
         }
 
         //EDICION
@@ -98,22 +94,20 @@ class KitsController extends Controller
                 //BORRAR IMAGEN 
                 $archivos=Kit::where('id',$id)->get('img_kit');
                 foreach($archivos as $archivo){
-                    $route = explode("/", $archivo->img_kit);
-                    Storage::delete('kits/'.$route[3]);
+                    Storage::delete('plus/'.$archivo->img_kit);
                 }
 
                 //SUBO IMAGEN AL STORAGE
-                $imagePath = $request->file('img_kit');
-                $imageName = time().'.'.$imagePath->getClientOriginalName();
-                $imagePath->move(storage_path('app/public/kits'),$imageName);
+                $image = $request->file('img_kit');
+                $imageName = time().'.'.$image->getClientOriginalName();
+                Storage::putFileAs('/plus', $image, $imageName);
 
                 Kit::where('id',$id)->update(['nombre_kit' => $request->nombre_kit,
                                           'descripcion_kit'=>$request->descripcion_kit,
                                           'precio'=>$request->precio,
-                                          'img_kit'=>'/storage/kits/'.$imageName]);
+                                          'img_kit'=>$imageName]);
 
             }
-
         }
 
         return response()->json(['success'=>'Kit Guardado.']);
@@ -163,14 +157,8 @@ class KitsController extends Controller
      */
     public function destroy($id)
     {
-
-        $archivos=Kit::where('id',$id)->get('img_kit');
-        foreach($archivos as $archivo){
-            $route = explode("/", $archivo->img_kit);
-            Storage::delete('kits/'.$route[3]);
-        }
-
-
+        $name=Kit::where('id',$id)->get('img_kit')[0]['img_kit'];
+        Storage::delete('plus/'.$name);
         Kit::find($id)->delete();
         return response()->json(['success'=>'Kit Borrado Exitosamente!']);
     }

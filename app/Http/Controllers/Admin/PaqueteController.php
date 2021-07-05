@@ -22,8 +22,7 @@ class PaqueteController extends Controller
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('image', function ($data) { 
-                        $url= asset($data->img_paquete);
-                        return '<img src="'.$url.'" border="0" width="40" class="img-rounded" align="center" />';
+                        return '<img src="'.Storage::url('plans/'.$data->img_paquete).'" border="0" width="40" class="img-rounded" align="center" />';
                      })
                     ->editColumn('updated_at', function ($request) {
                         return $request->updated_at->format('Y-m-d'); 
@@ -67,9 +66,9 @@ class PaqueteController extends Controller
         if($request->create_edit==0){
 
             if ($request->file('img_paquete')) {
-                $imagePath = $request->file('img_paquete');
-                $imageName = time().'.'.$imagePath->getClientOriginalName();
-                $imagePath->move(storage_path('app/public/paquetes'),$imageName);
+                $image = $request->file('img_paquete');
+                $imageName = time().'.'.$image->getClientOriginalName();
+                Storage::putFileAs('/plans', $image, $imageName);
             }
 
             $paquete = new Paquete();
@@ -78,7 +77,7 @@ class PaqueteController extends Controller
             $paquete->precio_3=$request->precio_3;
             $paquete->precio_6=$request->precio_6;
             $paquete->precio_12=$request->precio_12;
-            $paquete->img_paquete='/storage/paquetes/'.$imageName;
+            $paquete->img_paquete=$imageName;
             $paquete->save();
 
         }else{
@@ -97,21 +96,20 @@ class PaqueteController extends Controller
                 //BORRAR IMAGEN 
                 $archivos=Paquete::where('id',$id)->get('img_paquete');
                 foreach($archivos as $archivo){
-                    $route = explode("/", $archivo->img_paquete);
-                    Storage::delete('paquetes/'.$route[3]);
+                    Storage::delete('plus/'.$archivo->img_paquete);
                 }
 
                 //SUBO IMAGEN AL STORAGE
-                $imagePath = $request->file('img_paquete');
-                $imageName = time().'.'.$imagePath->getClientOriginalName();
-                $imagePath->move(storage_path('app/public/paquetes'),$imageName);
+                $image = $request->file('img_paquete');
+                $imageName = time().'.'.$image->getClientOriginalName();
+                Storage::putFileAs('/plans', $image, $imageName);
 
                 Paquete::where('id',$id)->update(['nombre_paquete' => $request->nombre_paquete,
                                           'descripcion_paquete'=>$request->descripcion_paquete,
                                           'precio_3'=>$request->precio_3,
                                           'precio_6'=>$request->precio_6,
                                           'precio_12'=>$request->precio_12,
-                                          'img_paquete'=>'/storage/paquetes/'.$imageName]);
+                                          'img_paquete'=>$imageName]);
 
             }
 
@@ -164,15 +162,9 @@ class PaqueteController extends Controller
      */
     public function destroy($id)
     {
-
-        $archivos=Paquete::where('id',$id)->get('img_paquete');
-        foreach($archivos as $archivo){
-            $route = explode("/", $archivo->img_paquete);
-            Storage::delete('paquetes/'.$route[3]);
-        }
-
+        $name=Kit::Paquete('id',$id)->get('img_paquete')[0]['img_paquete'];
+        Storage::delete('plans/'.$name);
         Paquete::find($id)->delete();
-     
         return response()->json(['success'=>'Paquete Borrado Exitosamente!']);
     }
 
