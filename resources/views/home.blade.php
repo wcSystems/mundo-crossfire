@@ -456,7 +456,7 @@
                                                                                     @foreach ($chunk as $item)
                                                                                         <div class="elementor-element elementor-element-063642c" style="margin: auto;display:flex">
                                                                                             <div class="elementor-image">
-                                                                                                <img style="max-width: 200px;margin:auto" src="<?php echo $item->img_marcas; ?>"  class="attachment-large size-large lazyload"   />
+                                                                                                <img style="max-width: 200px;margin:auto" src="{{Storage::url('marcas/'.$item->img_marcas)}}"  class="attachment-large size-large lazyload"   />
                                                                                             </div>
                                                                                         </div>
                                                                                     @endforeach
