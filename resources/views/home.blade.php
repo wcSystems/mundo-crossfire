@@ -4,18 +4,18 @@
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Mundo Crossfire">
     <meta itemprop="description" content="🏋️🦵🏽 Preparador Físico Clases personalizadas y Grupales 🏋️👫 Coach TEFS Coach Crosstraining L3 Personal Training">
-    <meta itemprop="image" content="{{ Storage::url('logos/logo2.png/') }}">
+    <meta itemprop="image" content="{{ Storage::url('logos/mcf.png') }}">
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="www.mundo-crossfire.com.ve">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mundo Crossfire">
     <meta property="og:description" content="🏋️🦵🏽 Preparador Físico Clases personalizadas y Grupales 🏋️👫 Coach TEFS Coach Crosstraining L3 Personal Training">
-    <meta property="og:image" content="{{ Storage::url('logos/logo2.png/') }}">
+    <meta property="og:image" content="{{ Storage::url('logos/mcf.png') }}">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mundo Crossfire">
     <meta name="twitter:description" content="🏋️🦵🏽 Preparador Físico Clases personalizadas y Grupales 🏋️👫 Coach TEFS Coach Crosstraining L3 Personal Training">
-    <meta name="twitter:image" content="{{ Storage::url('logos/logo2.png/') }}">
+    <meta name="twitter:image" content="{{ Storage::url('logos/mcf.png') }}">
 @endsection
 @section('css')
     <style>
