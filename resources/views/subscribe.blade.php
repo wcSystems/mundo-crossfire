@@ -328,7 +328,7 @@
                                                                                                                             <div class="swiper-wrapper elementor-slides">
                                                                                                                                 @foreach ($kits as $item)
                                                                                                                                 <div class="elementor-repeater-item-84bbb56 swiper-slide">
-                                                                                                                                    <div style="background-color: #833CA300; background-size: contain;width: 100%;background-repeat: no-repeat;height: 300px;background-position: center;margin: auto;background-image:url({{$item->img_kit}})" >
+                                                                                                                                    <div style="background-color: #833CA300; background-size: contain;width: 100%;background-repeat: no-repeat;height: 300px;background-position: center;margin: auto;background-image:url({{Storage::url('plus/'.$item->img_kit)}})" >
                                                                                                                                     </div>
                                                                                                                                     <div class="swiper-slide-inner">
                                                                                                                                         <div class="swiper-slide-contents">
