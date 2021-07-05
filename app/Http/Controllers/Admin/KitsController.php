@@ -99,7 +99,7 @@ class KitsController extends Controller
                 $archivos=Kit::where('id',$id)->get('img_kit');
                 foreach($archivos as $archivo){
                     $route = explode("/", $archivo->img_kit);
-                    Storage::disk('public')->delete('kits/'.$route[3]);
+                    Storage::delete('kits/'.$route[3]);
                 }
 
                 //SUBO IMAGEN AL STORAGE
@@ -167,7 +167,7 @@ class KitsController extends Controller
         $archivos=Kit::where('id',$id)->get('img_kit');
         foreach($archivos as $archivo){
             $route = explode("/", $archivo->img_kit);
-            Storage::disk('public')->delete('kits/'.$route[3]);
+            Storage::delete('kits/'.$route[3]);
         }
 
 

@@ -98,7 +98,7 @@ class PaqueteController extends Controller
                 $archivos=Paquete::where('id',$id)->get('img_paquete');
                 foreach($archivos as $archivo){
                     $route = explode("/", $archivo->img_paquete);
-                    Storage::disk('public')->delete('paquetes/'.$route[3]);
+                    Storage::delete('paquetes/'.$route[3]);
                 }
 
                 //SUBO IMAGEN AL STORAGE
@@ -168,7 +168,7 @@ class PaqueteController extends Controller
         $archivos=Paquete::where('id',$id)->get('img_paquete');
         foreach($archivos as $archivo){
             $route = explode("/", $archivo->img_paquete);
-            Storage::disk('public')->delete('paquetes/'.$route[3]);
+            Storage::delete('paquetes/'.$route[3]);
         }
 
         Paquete::find($id)->delete();

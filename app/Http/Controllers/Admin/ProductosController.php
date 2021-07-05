@@ -229,7 +229,7 @@ class ProductosController extends Controller
             
         foreach($archivos as $archivo){
             $route = explode("/", $archivo->img);
-            Storage::disk('public')->delete('productos/'.$route[3]);
+            Storage::delete('productos/'.$route[3]);
         }
 
     
@@ -256,7 +256,7 @@ class ProductosController extends Controller
             foreach ($request->file('imagen') as $key => $value) {
             
                 $imageName = time(). $key . '.' . $value->getClientOriginalExtension();
-                Storage::disk('public')->put('productos/'.$imageName,  \File::get($value));
+                Storage::put('productos/'.$imageName,  \File::get($value));
            
                 $productos_foto = new Productos_Foto();
                 $productos_foto->producto_id=$id_producto->id;
@@ -282,7 +282,7 @@ class ProductosController extends Controller
                 
                 foreach($archivos as $archivo){
                     $route = explode("/", $archivo->img);
-                    Storage::disk('public')->delete('productos/'.$route[3]);
+                    Storage::delete('productos/'.$route[3]);
                 }
 
                 Productos_Foto::where('producto_id',$request->valor_producto)->delete();
@@ -292,7 +292,7 @@ class ProductosController extends Controller
                 foreach ($request->file('imagen') as $key => $value) {
                 
                     $imageName = time(). $key . '.' . $value->getClientOriginalExtension();
-                    Storage::disk('public')->put('productos/'.$imageName,  \File::get($value));
+                    Storage::put('productos/'.$imageName,  \File::get($value));
             
                     $productos_foto = new Productos_Foto();
                     $productos_foto->producto_id=$request->valor_producto;

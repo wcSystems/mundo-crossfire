@@ -64,10 +64,10 @@ Dropzone.options.dropzone =
         serverSide: true,
         ajax: "/admin-banner",
         columns: [
-            {data: 'img_banner', name: 'img_banner'},
-            {data: 'updated_at', name: 'updated_at'},
-            {data: 'image', name: 'image'},
-            {data: 'action', name: 'action', orderable: false, searchable: false},
+            {data: 'nombre', name: 'nombre'},
+            {data: 'fecha', name: 'fecha'},
+            {data: 'imagen', name: 'imagen'},
+            {data: 'accion', name: 'accion', orderable: false, searchable: false},
         ],
         "language":{
                 "processing": "Procesando...",

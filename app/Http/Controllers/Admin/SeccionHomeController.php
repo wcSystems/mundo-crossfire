@@ -94,7 +94,7 @@ class SeccionHomeController extends Controller
                 $archivos=Seccion::where('id',$id)->get('img');
                 foreach($archivos as $archivo){
                     $route = explode("/", $archivo->img);
-                    Storage::disk('public')->delete('seccion/'.$route[3]);
+                    Storage::delete('seccion/'.$route[3]);
                 }
 
                 //SUBO IMAGEN AL STORAGE
@@ -161,7 +161,7 @@ class SeccionHomeController extends Controller
         $archivos=Seccion::where('id',$id)->get('img');
         foreach($archivos as $archivo){
             $route = explode("/", $archivo->img);
-            Storage::disk('public')->delete('seccion/'.$route[3]);
+            Storage::delete('seccion/'.$route[3]);
         }
 
         Seccion::find($id)->delete();

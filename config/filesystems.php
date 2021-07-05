@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'public'),
+    'default' => env('FILESYSTEM_DRIVER', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,15 +30,37 @@ return [
 
     'disks' => [
 
+        'local' => [
+            'driver' => 'local',
+            'root' => storage_path('app'),
+        ],
+
         'public' => [
-            'driver' => 's3',
+            'driver' => 'local',
             'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        's3' => [
+            'driver' => 's3',
+            'key' => env('AWS_ACCESS_KEY_ID'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY'),
+            'region' => env('AWS_DEFAULT_REGION'),
+            'bucket' => env('AWS_BUCKET'),
+            'url' => env('AWS_URL'),
+            'endpoint' => env('AWS_ENDPOINT'),
+        ],
+       
+        'spaces' => [
+            'driver' => 's3',
+            'root' => 'mundo-crossfire',
             'key' => env('DO_SPACES_KEY'),
             'secret' => env('DO_SPACES_SECRET'),
             'region' => env('DO_SPACES_REGION'),
             'bucket' => env('DO_SPACES_BUCKET'),
             'endpoint' => env('DO_SPACES_ENDPOINT'),
-            'url' => env('do_url'),
+            'url' => env('DO_URL'),
         ],
 
     ],

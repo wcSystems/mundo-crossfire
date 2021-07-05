@@ -84,7 +84,7 @@ class MarcasController extends Controller
 
             foreach($archivos as $archivo){
                 $route = explode("/", $archivo->img_marcas);
-                Storage::disk('public')->delete('marcas/'.$route[3]);
+                Storage::delete('marcas/'.$route[3]);
             }
 
             $image = $request->file('file');
@@ -148,7 +148,7 @@ class MarcasController extends Controller
 
         foreach($archivos as $archivo){
             $route = explode("/", $archivo->img_marcas);
-            Storage::disk('public')->delete('marcas/'.$route[3]);
+            Storage::delete('marcas/'.$route[3]);
         }
         
         Marcas::find($id)->delete();
